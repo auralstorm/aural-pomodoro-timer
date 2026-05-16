@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Debug snapshots
+settings-snapshot.yml
+snapshot-*.txt
+statistics-*.yml

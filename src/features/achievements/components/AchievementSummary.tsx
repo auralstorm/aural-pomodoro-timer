@@ -68,9 +68,7 @@ function SummaryCard({
         <img alt="" className="size-7 object-contain" draggable={false} src={iconSrc} />
       </div>
       <p className="text-sm font-semibold text-muted-foreground">{label}</p>
-      <strong className="mt-1 block text-2xl font-black text-foreground">
-        {value}
-      </strong>
+      <strong className="mt-1 block text-2xl font-black text-foreground">{value}</strong>
       <p className="mt-3 text-xs leading-5 text-muted-foreground">{meta}</p>
     </section>
   );

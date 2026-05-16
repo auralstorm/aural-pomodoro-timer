@@ -56,15 +56,21 @@ async function showNotification(
 }
 
 export function notifyFocusComplete(options?: NotificationOptions): Promise<void> {
-  return showNotification({
-    title: "专注完成啦",
-    body: "一颗番茄已经记录，休息一下再继续。",
-  }, options);
+  return showNotification(
+    {
+      title: "专注完成啦",
+      body: "一颗番茄已经记录，休息一下再继续。",
+    },
+    options,
+  );
 }
 
 export function notifyBreakComplete(options?: NotificationOptions): Promise<void> {
-  return showNotification({
-    title: "休息结束",
-    body: "准备回到下一轮专注。",
-  }, options);
+  return showNotification(
+    {
+      title: "休息结束",
+      body: "准备回到下一轮专注。",
+    },
+    options,
+  );
 }

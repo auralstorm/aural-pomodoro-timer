@@ -5,11 +5,6 @@ use tauri::{
 };
 
 #[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
-
-#[tauri::command]
 fn show_assistant_menu(
     window: tauri::WebviewWindow,
     position_locked: bool,
@@ -161,7 +156,7 @@ pub fn run() {
 
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![greet, show_assistant_menu])
+        .invoke_handler(tauri::generate_handler![show_assistant_menu])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

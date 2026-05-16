@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 import { NumberStepperSetting } from "@/components/settings/NumberStepperSetting";
-import { taskPriorityOptions } from "@/components/task/task-management.constants";
+import { PRIORITY_OPTIONS } from "@/constants/task";
 import type { TaskEditorValues } from "@/components/task/task-editor.types";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
@@ -123,7 +123,7 @@ export function TaskEditorForm({ values, onChange }: TaskEditorFormProps) {
       <div className="flex flex-col gap-2">
         <span className="text-sm font-bold">优先级</span>
         <div className="grid grid-cols-3 gap-2">
-          {taskPriorityOptions.map((option) => (
+          {PRIORITY_OPTIONS.map((option) => (
             <button
               className={cn(
                 "h-12 rounded-[var(--radius-md)] border font-semibold transition",

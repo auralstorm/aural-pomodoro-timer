@@ -23,7 +23,7 @@ import {
   DONUT_CENTER_VALUE_CLASS,
   EFFICIENT_TIME_CONTENT_CLASS,
   StatisticsDashboard,
-} from "./StatisticsDashboard";
+} from "./index";
 
 describe("StatisticsDashboard", () => {
   beforeEach(() => {
@@ -55,9 +55,7 @@ describe("StatisticsDashboard", () => {
 
     const taskCard = screen.getByText("完成任务数").closest("section");
     expect(taskCard).not.toBeNull();
-    expect(within(taskCard!).getByText("本周还没有完成任务")).toHaveClass(
-      "text-muted-foreground",
-    );
+    expect(within(taskCard!).getByText("本周还没有完成任务")).toHaveClass("text-muted-foreground");
 
     const streakCard = screen.getByText("连续打卡天数").closest("section");
     expect(streakCard).not.toBeNull();
@@ -204,11 +202,8 @@ describe("StatisticsDashboard", () => {
     const taskCards = screen.getAllByTestId("achievement-card");
     expect(taskCards).toHaveLength(4);
     expect(screen.getByText("完成第 1 个任务")).toBeInTheDocument();
-    expect(taskCards.map((card) => card.textContent).join(" ")).not.toContain(
-      "连续专注 3 天",
-    );
+    expect(taskCards.map((card) => card.textContent).join(" ")).not.toContain("连续专注 3 天");
   });
-
 });
 
 function createFocusSession(

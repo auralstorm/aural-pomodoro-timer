@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Live2DCanvas from "@/components/assistant/AssistantLive2D";
+import { Live2DCanvas } from "@/components/assistant/AssistantLive2D";
 
 export function DesktopAssistantPage() {
   useEffect(() => {

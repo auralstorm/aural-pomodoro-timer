@@ -1,8 +1,6 @@
 import { create } from "zustand";
 
-import type { WhiteNoisePreset } from "@/types/settings";
-
-type ActiveWhiteNoisePreset = Exclude<WhiteNoisePreset, "off">;
+import type { ActiveWhiteNoisePreset } from "@/types/settings";
 
 type AudioRuntimeStore = {
   activeWhiteNoisePreset: ActiveWhiteNoisePreset | null;

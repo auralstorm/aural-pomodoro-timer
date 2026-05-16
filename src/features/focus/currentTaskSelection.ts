@@ -9,10 +9,7 @@ function getFocusTotalSeconds(): number {
 
 function isActiveFocusSession() {
   const timer = useTimerStore.getState();
-  return (
-    timer.mode === "focus" &&
-    (timer.status === "running" || timer.status === "paused")
-  );
+  return timer.mode === "focus" && (timer.status === "running" || timer.status === "paused");
 }
 
 function canSelectTask(taskId: string): boolean {

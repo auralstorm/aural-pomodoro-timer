@@ -10,11 +10,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  playReminderTone,
-  playWhiteNoise,
-  stopWhiteNoise,
-} from "@/features/audio/audioController";
+import { playReminderTone, playWhiteNoise, stopWhiteNoise } from "@/features/audio/audioController";
 import {
   getReminderToneAudio,
   getWhiteNoiseAudio,
@@ -127,7 +123,11 @@ export function FocusTools() {
           options={whiteNoiseOptions}
           title="白噪音"
           triggerLabel="选择白噪音"
-          value={settings.whiteNoisePreset === "off" ? lastWhiteNoisePresetRef.current : settings.whiteNoisePreset}
+          value={
+            settings.whiteNoisePreset === "off"
+              ? lastWhiteNoisePresetRef.current
+              : settings.whiteNoisePreset
+          }
           valueLabel={whiteNoiseLabel}
         />
 
@@ -212,7 +212,10 @@ function SelectableFocusToolCard<TValue extends string>({
               <ChevronDown aria-hidden="true" className="size-4" />
             </button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="rounded-[16px] border border-border bg-background/95 p-1 shadow-[0_16px_40px_rgba(58,46,42,0.12)] backdrop-blur-md">
+          <DropdownMenuContent
+            align="start"
+            className="rounded-[16px] border border-border bg-background/95 p-1 shadow-[0_16px_40px_rgba(58,46,42,0.12)] backdrop-blur-md"
+          >
             <DropdownMenuRadioGroup
               onValueChange={(nextValue) => void onSelect(nextValue as TValue)}
               value={value}
@@ -231,11 +234,7 @@ function SelectableFocusToolCard<TValue extends string>({
         </DropdownMenu>
       </div>
 
-      <ToolToggleButton
-        ariaLabel={`切换${title}`}
-        enabled={enabled}
-        onClick={onToggle}
-      />
+      <ToolToggleButton ariaLabel={`切换${title}`} enabled={enabled} onClick={onToggle} />
     </div>
   );
 }
@@ -276,20 +275,9 @@ function ToggleFocusToolCard({
   );
 }
 
-function ToolIcon({
-  className,
-  icon: Icon,
-}: {
-  className: string;
-  icon: typeof Bell;
-}) {
+function ToolIcon({ className, icon: Icon }: { className: string; icon: typeof Bell }) {
   return (
-    <span
-      className={cn(
-        "grid size-11 place-items-center rounded-full",
-        className,
-      )}
-    >
+    <span className={cn("grid size-11 place-items-center rounded-full", className)}>
       <Icon aria-hidden="true" className="size-5" />
     </span>
   );

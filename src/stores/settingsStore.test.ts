@@ -16,9 +16,7 @@ describe("settings store", () => {
 
     useSettingsStore.getState().resetSettings();
 
-    expect(useSettingsStore.getState().focusMinutes).toBe(
-      DEFAULT_SETTINGS.focusMinutes,
-    );
+    expect(useSettingsStore.getState().focusMinutes).toBe(DEFAULT_SETTINGS.focusMinutes);
   });
 
   it("persists with Zustand persist metadata", () => {

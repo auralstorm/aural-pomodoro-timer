@@ -10,13 +10,7 @@ type PageLayoutProps = {
   className?: string;
 };
 
-export function PageLayout({
-  title,
-  subtitle,
-  action,
-  children,
-  className,
-}: PageLayoutProps) {
+export function PageLayout({ title, subtitle, action, children, className }: PageLayoutProps) {
   return (
     <main className="min-h-[calc(100dvh-var(--header-height))] bg-background">
       <div
@@ -29,13 +23,9 @@ export function PageLayout({
           <header className="flex items-end justify-between gap-6">
             <div className="flex flex-col gap-2">
               {title ? (
-                <h1 className="text-4xl font-black tracking-normal text-foreground">
-                  {title}
-                </h1>
+                <h1 className="text-4xl font-black tracking-normal text-foreground">{title}</h1>
               ) : null}
-              {subtitle ? (
-                <p className="text-base text-muted-foreground">{subtitle}</p>
-              ) : null}
+              {subtitle ? <p className="text-base text-muted-foreground">{subtitle}</p> : null}
             </div>
             {action}
           </header>

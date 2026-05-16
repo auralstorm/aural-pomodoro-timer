@@ -4,11 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { DEFAULT_SETTINGS } from "@/constants/settings";
-import {
-  playReminderTone,
-  playWhiteNoise,
-  stopWhiteNoise,
-} from "@/features/audio/audioController";
+import { playReminderTone, playWhiteNoise, stopWhiteNoise } from "@/features/audio/audioController";
 import { useSettingsStore } from "@/stores/settingsStore";
 import { FocusTools } from "./FocusTools";
 

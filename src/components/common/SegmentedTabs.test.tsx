@@ -32,9 +32,6 @@ describe("SegmentedTabs", () => {
     fireEvent.click(screen.getByRole("button", { name: "长休息" }));
 
     expect(indicator?.parentElement).toHaveStyle("--active-index: 2");
-    expect(screen.getByRole("button", { name: "长休息" })).toHaveAttribute(
-      "aria-pressed",
-      "true",
-    );
+    expect(screen.getByRole("button", { name: "长休息" })).toHaveAttribute("aria-pressed", "true");
   });
 });

@@ -1,34 +1,34 @@
 :root {
   /* Brand */
-  --color-tomato-red: #FF6B6B;
-  --color-tomato-deep: #F25555;
-  --color-tomato-light: #FFE1DD;
-  --color-tomato-soft: #FFF0EE;
+  --color-tomato-red: #ff6b6b;
+  --color-tomato-deep: #f25555;
+  --color-tomato-light: #ffe1dd;
+  --color-tomato-soft: #fff0ee;
 
   /* Accent */
-  --color-cream-orange: #FFD6A5;
-  --color-warm-yellow: #FFE89A;
-  --color-mint-green: #BEECC4;
-  --color-sky-blue: #BFE9FF;
-  --color-lavender: #DCCBFF;
+  --color-cream-orange: #ffd6a5;
+  --color-warm-yellow: #ffe89a;
+  --color-mint-green: #beecc4;
+  --color-sky-blue: #bfe9ff;
+  --color-lavender: #dccbff;
 
   /* Neutral */
-  --color-page-bg: #FFF8F3;
-  --color-card-bg: #FFFFFF;
-  --color-border: #F1E4DC;
-  --color-divider: #F6EDE8;
+  --color-page-bg: #fff8f3;
+  --color-card-bg: #ffffff;
+  --color-border: #f1e4dc;
+  --color-divider: #f6ede8;
 
   /* Text */
-  --color-text-primary: #3A2E2A;
-  --color-text-secondary: #7B6F6A;
-  --color-text-tertiary: #A99C96;
-  --color-text-inverse: #FFFFFF;
+  --color-text-primary: #3a2e2a;
+  --color-text-secondary: #7b6f6a;
+  --color-text-tertiary: #a99c96;
+  --color-text-inverse: #ffffff;
 
   /* Status */
-  --color-success: #6BCB77;
-  --color-warning: #FFB84C;
-  --color-danger: #FF7A7A;
-  --color-info: #7EC8E3;
+  --color-success: #6bcb77;
+  --color-warning: #ffb84c;
+  --color-danger: #ff7a7a;
+  --color-info: #7ec8e3;
 
   /* Radius */
   --radius-sm: 12px;
@@ -41,7 +41,7 @@
 
   /* Shadow */
   --shadow-card: 0 8px 24px rgba(58, 46, 42, 0.06);
-  --shadow-card-hover: 0 12px 32px rgba(58, 46, 42, 0.10);
+  --shadow-card-hover: 0 12px 32px rgba(58, 46, 42, 0.1);
   --shadow-button: 0 6px 16px rgba(255, 107, 107, 0.25);
   --shadow-modal: 0 20px 60px rgba(58, 46, 42, 0.16);
 

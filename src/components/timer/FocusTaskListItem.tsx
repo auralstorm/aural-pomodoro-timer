@@ -7,7 +7,7 @@ import type { Task } from "@/types/task";
 import { cn } from "@/lib/utils";
 
 import { FocusTaskActionsMenu } from "./FocusTaskActionsMenu";
-import { priorityMap } from "@/components/task/TaskCard";
+import { PRIORITY_MAP, TASK_STATUS_LABEL } from "@/constants/task";
 
 import IconTomato from "@/assets/icons/icon-tomato-count.svg";
 
@@ -35,16 +35,16 @@ export function FocusTaskListItem({
   const isCompleted = task.status === "completed";
   const isFocusRunning = focusStatus === "running";
   const isFocusPaused = focusStatus === "paused";
-  const priority = priorityMap[task.priority];
+  const priority = PRIORITY_MAP[task.priority];
   const PriorityIcon = priority.icon;
 
   const statusLabel = isCompleted
-    ? "已完成"
+    ? TASK_STATUS_LABEL.completed
     : isFocusRunning
       ? "专注中"
       : isCurrent
         ? "当前专注"
-        : "待开始";
+        : TASK_STATUS_LABEL.pending;
 
   const handleSetCurrent = () => {
     if (!isCompleted) {
@@ -133,8 +133,7 @@ export function FocusTaskListItem({
             }}
             size="sm"
             variant={isCurrent ? "secondary" : "ghost"}
-          >
-          </AppButton>
+          ></AppButton>
         ) : null}
         <FocusTaskActionsMenu
           isCurrent={isCurrent}

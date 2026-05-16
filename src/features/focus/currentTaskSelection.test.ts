@@ -41,8 +41,12 @@ describe("currentTaskSelection", () => {
       pausedAt: undefined,
       pausedAccumulatedMs: 0,
     });
-    expect(useTaskStore.getState().tasks.find((task) => task.id === task1.id)?.status).toBe("pending");
-    expect(useTaskStore.getState().tasks.find((task) => task.id === task2.id)?.status).toBe("inProgress");
+    expect(useTaskStore.getState().tasks.find((task) => task.id === task1.id)?.status).toBe(
+      "pending",
+    );
+    expect(useTaskStore.getState().tasks.find((task) => task.id === task2.id)?.status).toBe(
+      "inProgress",
+    );
   });
 
   it("resets a paused focus round to idle when switching to another task", () => {

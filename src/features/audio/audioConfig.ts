@@ -33,10 +33,7 @@ export const reminderToneAudioConfig: Record<ReminderTonePreset, AudioAssetConfi
   },
 };
 
-export const whiteNoiseAudioConfig: Record<
-  Exclude<WhiteNoisePreset, "off">,
-  AudioAssetConfig
-> = {
+export const whiteNoiseAudioConfig: Record<Exclude<WhiteNoisePreset, "off">, AudioAssetConfig> = {
   rain: {
     label: "雷声",
     src: rainNoise,
@@ -59,9 +56,7 @@ export function getReminderToneAudio(preset: ReminderTonePreset): AudioAssetConf
   return reminderToneAudioConfig[preset];
 }
 
-export function getWhiteNoiseAudio(
-  preset: Exclude<WhiteNoisePreset, "off">,
-): AudioAssetConfig {
+export function getWhiteNoiseAudio(preset: Exclude<WhiteNoisePreset, "off">): AudioAssetConfig {
   return whiteNoiseAudioConfig[preset];
 }
 

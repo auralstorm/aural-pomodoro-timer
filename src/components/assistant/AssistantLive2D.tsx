@@ -4,15 +4,10 @@ import * as PIXI from "pixi.js";
 import { Live2DModel, MotionPriority } from "pixi-live2d-display/cubism4";
 import { getCurrentWindow } from "@tauri-apps/api/window";
 import { invoke } from "@tauri-apps/api/core";
-import { emit } from "@tauri-apps/api/event";
-import { listen, type UnlistenFn } from "@tauri-apps/api/event";
-import {
-  AssistantEvent,
-  AssistantCommand,
-  AssistantBubbleMessages,
-} from "@/types/assistant";
+import { safeEmit, safeListen, type UnlistenFn } from "@/desktop/event";
+import { AssistantEvent, AssistantCommand, AssistantBubbleMessages } from "@/constants/assistant";
 
-export default function Live2DCanvas() {
+export function Live2DCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
   const modelRef = useRef<Live2DModel | null>(null);
   const unlistenersRef = useRef<UnlistenFn[]>([]);
@@ -45,7 +40,7 @@ export default function Live2DCanvas() {
         motionIndex?: number,
         priority = MotionPriority.FORCE,
       ) =>
-        listen(event, () => {
+        safeListen(event, () => {
           model.motion(motionGroup, motionIndex, priority);
           showBubble(event);
         });
@@ -69,7 +64,7 @@ export default function Live2DCanvas() {
   );
 
   useEffect(() => {
-    const unlisten = listen<string>("assistant-menu-action", (event) => {
+    const unlisten = safeListen<string>("assistant-menu-action", (event) => {
       const action = event.payload;
       switch (action) {
         case "toggle_lock":
@@ -82,19 +77,19 @@ export default function Live2DCanvas() {
           break;
         }
         case "start_focus":
-          void emit(AssistantCommand.StartFocus);
+          void safeEmit(AssistantCommand.StartFocus);
           break;
         case "pause":
-          void emit(AssistantCommand.Pause);
+          void safeEmit(AssistantCommand.Pause);
           break;
         case "reset":
-          void emit(AssistantCommand.Reset);
+          void safeEmit(AssistantCommand.Reset);
           break;
         case "switch_mode":
-          void emit(AssistantCommand.SwitchMode);
+          void safeEmit(AssistantCommand.SwitchMode);
           break;
         case "show_stats":
-          void emit(AssistantCommand.ShowStats);
+          void safeEmit(AssistantCommand.ShowStats);
           break;
         case "headpat":
           modelRef.current?.motion("Idle", undefined, MotionPriority.FORCE);
@@ -109,10 +104,10 @@ export default function Live2DCanvas() {
           showBubble("celebrate");
           break;
         case "open_settings":
-          void emit(AssistantCommand.OpenSettings);
+          void safeEmit(AssistantCommand.OpenSettings);
           break;
         case "exit_assistant":
-          void emit(AssistantCommand.HideAssistant);
+          void safeEmit(AssistantCommand.HideAssistant);
           void getCurrentWindow().close();
           break;
       }
@@ -138,9 +133,7 @@ export default function Live2DCanvas() {
 
       containerRef.current!.appendChild(app.view as HTMLCanvasElement);
 
-      const model = await Live2DModel.from(
-        "/resources/Hiyori/Hiyori.model3.json",
-      );
+      const model = await Live2DModel.from("/resources/Hiyori/Hiyori.model3.json");
 
       modelRef.current = model;
 

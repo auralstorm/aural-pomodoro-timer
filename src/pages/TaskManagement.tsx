@@ -11,9 +11,7 @@ import {
   type TaskEditorMode,
   type TaskEditorValues,
 } from "@/components/task/task-editor.types";
-import {
-  type TaskFilterValue,
-} from "@/components/task/task-management.constants";
+import { type TaskFilterValue } from "@/components/task/task-management.constants";
 import { TaskToolbar } from "@/components/task/TaskToolbar";
 import {
   Pagination,
@@ -31,7 +29,7 @@ import { useSettingsStore } from "@/stores/settingsStore";
 import { useStatsStore } from "@/stores/statsStore";
 import { useTaskStore } from "@/stores/taskStore";
 import type { Task } from "@/types/task";
-import { calculateTodayStats } from "@/utils/stats";
+import { calculateTodayStats, calculateCompletionRate } from "@/utils/stats";
 
 const TASKS_PER_PAGE = 5;
 
@@ -71,8 +69,7 @@ export function TaskManagement() {
   const navigate = useNavigate();
   const sessions = useStatsStore((state) => state.sessions);
   const focusMinutes = useSettingsStore((state) => state.focusMinutes);
-  const { tasks, currentTaskId, createTask, updateTask, completeTask } =
-    useTaskStore();
+  const { tasks, currentTaskId, createTask, updateTask, completeTask } = useTaskStore();
   const openModal = useModalStore((state) => state.openModal);
   const [filter, setFilter] = useState<TaskFilterValue>("today");
   const [editorOpen, setEditorOpen] = useState(false);
@@ -101,9 +98,7 @@ export function TaskManagement() {
 
   const completedCount = tasks.filter((task) => task.status === "completed").length;
   const remainingCount = Math.max(0, tasks.length - completedCount);
-  const completionRate = tasks.length
-    ? Math.round((completedCount / tasks.length) * 100)
-    : 0;
+  const completionRate = calculateCompletionRate(tasks);
   const totalEstimatedPomodoros = tasks.reduce((sum, task) => sum + task.estimatedPomodoros, 0);
   const todayStats = calculateTodayStats(sessions);
   const totalCompletedPomodoros = todayStats.completedPomodoros;
@@ -185,15 +180,6 @@ export function TaskManagement() {
             ) : (
               <div className="flex flex-col">
                 <div className="flex flex-col gap-3 rounded-xl border border-border border-dashed bg-card px-5 py-5">
-                  {/* <div className="grid grid-cols-[minmax(0,1.8fr)_120px_120px_92px_120px_88px] items-center gap-4 px-4 text-sm font-semibold text-muted-foreground max-xl:hidden">
-                    <span>任务名称</span>
-                    <span className="text-center">优先级</span>
-                    <span className="text-center">番茄进度</span>
-                    <span className="text-center">状态</span>
-                    <span className="text-center">动作</span>
-                    <span className="text-center">操作</span>
-                  </div> */}
-
                   {paginatedTasks.map((task) => (
                     <TaskCard
                       isCurrent={task.id === currentTaskId}
@@ -218,7 +204,9 @@ export function TaskManagement() {
                       <PaginationItem>
                         <PaginationPrevious
                           aria-disabled={currentPage === 1}
-                          className={currentPage === 1 ? "pointer-events-none opacity-50" : undefined}
+                          className={
+                            currentPage === 1 ? "pointer-events-none opacity-50" : undefined
+                          }
                           href="#"
                           onClick={(event) => {
                             event.preventDefault();
@@ -250,7 +238,11 @@ export function TaskManagement() {
                       <PaginationItem>
                         <PaginationNext
                           aria-disabled={currentPage === totalPages}
-                          className={currentPage === totalPages ? "pointer-events-none opacity-50" : undefined}
+                          className={
+                            currentPage === totalPages
+                              ? "pointer-events-none opacity-50"
+                              : undefined
+                          }
                           href="#"
                           onClick={(event) => {
                             event.preventDefault();

@@ -11,11 +11,7 @@ import {
   DrawerTitle,
 } from "@/components/ui/drawer";
 
-import type {
-  AchievementCategoryFilter,
-  AchievementItem,
-  AchievementSummaryModel,
-} from "../types";
+import type { AchievementCategoryFilter, AchievementItem, AchievementSummaryModel } from "../types";
 import { AchievementCategoryTabs } from "./AchievementCategoryTabs";
 import { AchievementGrid } from "./AchievementGrid";
 import { AchievementSummary } from "./AchievementSummary";
@@ -34,8 +30,7 @@ export function AchievementDrawer({
   achievements,
   summary,
 }: AchievementDrawerProps) {
-  const [activeCategory, setActiveCategory] =
-    useState<AchievementCategoryFilter>("all");
+  const [activeCategory, setActiveCategory] = useState<AchievementCategoryFilter>("all");
 
   useEffect(() => {
     if (open) {
@@ -65,9 +60,7 @@ export function AchievementDrawer({
         <div className="flex h-full flex-col">
           <DrawerHeader className="flex-row items-start justify-between border-b border-border px-8 py-6 text-left">
             <div>
-              <DrawerTitle className="text-2xl font-black text-foreground">
-                成就中心
-              </DrawerTitle>
+              <DrawerTitle className="text-2xl font-black text-foreground">成就中心</DrawerTitle>
               <DrawerDescription className="mt-1 text-sm text-muted-foreground">
                 每一颗番茄，都是成长的记录
               </DrawerDescription>
@@ -87,10 +80,7 @@ export function AchievementDrawer({
           <main className="flex-1 overflow-y-auto px-8 py-6">
             <div className="flex flex-col gap-5">
               <AchievementSummary summary={summary} />
-              <AchievementCategoryTabs
-                onChange={setActiveCategory}
-                value={activeCategory}
-              />
+              <AchievementCategoryTabs onChange={setActiveCategory} value={activeCategory} />
               <AchievementGrid achievements={filteredAchievements} />
               <AchievementTipBar />
             </div>

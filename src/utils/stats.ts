@@ -19,18 +19,12 @@ function isCompletedFocusSession(session: PomodoroSession): boolean {
   return session.mode === "focus" && session.completed;
 }
 
-export function calculateTodayStats(
-  sessions: PomodoroSession[],
-  now = new Date(),
-): TodayStats {
+export function calculateTodayStats(sessions: PomodoroSession[], now = new Date()): TodayStats {
   const today = dayjs(now);
 
   return sessions.reduce<TodayStats>(
     (stats, session) => {
-      if (
-        isCompletedFocusSession(session) &&
-        dayjs(session.endedAt).isSame(today, "day")
-      ) {
+      if (isCompletedFocusSession(session) && dayjs(session.endedAt).isSame(today, "day")) {
         stats.focusMinutes += session.durationMinutes;
         stats.completedPomodoros += 1;
       }
@@ -41,18 +35,13 @@ export function calculateTodayStats(
   );
 }
 
-export function calculateWeeklyTrend(
-  sessions: PomodoroSession[],
-  now = new Date(),
-): TrendPoint[] {
+export function calculateWeeklyTrend(sessions: PomodoroSession[], now = new Date()): TrendPoint[] {
   const end = dayjs(now).startOf("day");
 
   return Array.from({ length: 7 }, (_, index) => {
     const date = end.subtract(6 - index, "day");
     const daySessions = sessions.filter(
-      (session) =>
-        isCompletedFocusSession(session) &&
-        dayjs(session.endedAt).isSame(date, "day"),
+      (session) => isCompletedFocusSession(session) && dayjs(session.endedAt).isSame(date, "day"),
     );
 
     return {
@@ -74,10 +63,7 @@ export function calculateCompletionRate(tasks: Task[]): number {
   return Math.round((completed / tasks.length) * 100);
 }
 
-export function getCurrentStreakDays(
-  sessions: PomodoroSession[],
-  now = new Date(),
-): number {
+export function getCurrentStreakDays(sessions: PomodoroSession[], now = new Date()): number {
   const focusedDays = new Set(
     sessions
       .filter(isCompletedFocusSession)

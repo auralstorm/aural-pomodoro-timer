@@ -17,19 +17,12 @@ import { useTaskStore } from "@/stores/taskStore";
 import { useTimerStore } from "@/stores/timerStore";
 import type { Task } from "@/types/task";
 
-
 type FocusTaskCardProps = {
   onStartTask?: (taskId: string) => void;
 };
 
 export function FocusTaskCard({ onStartTask }: FocusTaskCardProps) {
-  const {
-    tasks,
-    currentTaskId,
-    createTask,
-    updateTask,
-    completeTask,
-  } = useTaskStore();
+  const { tasks, currentTaskId, createTask, updateTask, completeTask } = useTaskStore();
   const timerCurrentTaskId = useTimerStore((state) => state.currentTaskId);
   const timerMode = useTimerStore((state) => state.mode);
   const timerStatus = useTimerStore((state) => state.status);
@@ -46,9 +39,7 @@ export function FocusTaskCard({ onStartTask }: FocusTaskCardProps) {
     [tasks],
   );
   const previewTasks = useMemo(() => {
-    return tasks.filter(
-      (task) => task.status !== "completed" || task.id === currentTaskId,
-    );
+    return tasks.filter((task) => task.status !== "completed" || task.id === currentTaskId);
   }, [currentTaskId, tasks]);
 
   function resetEditor() {
@@ -94,11 +85,7 @@ export function FocusTaskCard({ onStartTask }: FocusTaskCardProps) {
   }
 
   function handleToggleComplete(taskId: string) {
-    if (
-      timerMode === "focus" &&
-      timerCurrentTaskId === taskId &&
-      timerStatus === "running"
-    ) {
+    if (timerMode === "focus" && timerCurrentTaskId === taskId && timerStatus === "running") {
       openModal("actionConfirm", {
         confirmTitle: "确认完成当前专注任务？",
         confirmDescription: "完成后会立即清空当前专注绑定，本轮专注不会继续关联这个任务。",
@@ -132,19 +119,11 @@ export function FocusTaskCard({ onStartTask }: FocusTaskCardProps) {
   }
 
   function handleStart(taskId: string) {
-    if (
-      timerMode === "focus" &&
-      timerStatus === "running" &&
-      timerCurrentTaskId === taskId
-    ) {
+    if (timerMode === "focus" && timerStatus === "running" && timerCurrentTaskId === taskId) {
       return;
     }
 
-    if (
-      timerMode === "focus" &&
-      timerStatus === "paused" &&
-      timerCurrentTaskId === taskId
-    ) {
+    if (timerMode === "focus" && timerStatus === "paused" && timerCurrentTaskId === taskId) {
       resumeTimer();
       return;
     }
@@ -197,9 +176,8 @@ export function FocusTaskCard({ onStartTask }: FocusTaskCardProps) {
               openModal("deleteTaskConfirm", {
                 taskId: task.id,
                 taskTitle: task.title,
-              })
-            }
-            }
+              });
+            }}
             onEdit={openEditDrawer}
             onSetCurrent={handleSetCurrent}
             onStart={handleStart}
@@ -209,24 +187,6 @@ export function FocusTaskCard({ onStartTask }: FocusTaskCardProps) {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3 border-border">
-          {/* <div className="min-h-9">
-            {tasks.length > 0 && completedCount === tasks.length ? (
-              <p className="inline-flex min-h-9 items-center text-sm font-semibold text-[var(--color-success)]">
-                今日任务已完成
-              </p>
-            ) : canStartCurrentTask && currentTask ? (
-              <AppButton
-                className="h-9 px-4 text-sm"
-                onClick={() => handleStart(currentTask.id)}
-                size="sm"
-                variant="secondary"
-              >
-                {isFocusPaused && timerCurrentTaskId === currentTask.id
-                  ? "继续专注"
-                  : "开始当前任务"}
-              </AppButton>
-            ) : null}
-          </div> */}
           {tasks.length > 4 ? (
             <div className="text-center">
               <Link

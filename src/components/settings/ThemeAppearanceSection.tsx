@@ -19,10 +19,7 @@ type ThemeAppearanceSectionProps = {
   onThemeChange: (theme: AppTheme) => void;
 };
 
-export function ThemeAppearanceSection({
-  theme,
-  onThemeChange,
-}: ThemeAppearanceSectionProps) {
+export function ThemeAppearanceSection({ theme, onThemeChange }: ThemeAppearanceSectionProps) {
   return (
     <SettingsSectionCard icon={settingsIcons.sectionTheme} title="主题外观">
       <div className="grid grid-cols-4 gap-4 max-lg:grid-cols-2">

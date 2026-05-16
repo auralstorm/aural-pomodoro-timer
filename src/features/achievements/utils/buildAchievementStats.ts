@@ -11,9 +11,7 @@ export function buildAchievementStats(
   tasks: Task[],
   now = new Date(),
 ): AchievementStats {
-  const focusSessions = sessions.filter(
-    (session) => session.mode === "focus" && session.completed,
-  );
+  const focusSessions = sessions.filter((session) => session.mode === "focus" && session.completed);
   const today = dayjs(now);
   const weekStart = today.startOf("week");
   const weekEnd = today.endOf("week");
@@ -32,16 +30,10 @@ export function buildAchievementStats(
 
   return {
     afternoonFocusCount: countSessionsByHour(focusSessions, 13, 18),
-    completedHighPriorityTasks: completedTasks.filter(
-      (task) => task.priority !== "normal",
-    ).length,
+    completedHighPriorityTasks: completedTasks.filter((task) => task.priority !== "normal").length,
     completedTasks: completedTasks.length,
-    morningFocusCount: focusSessions.filter(
-      (session) => dayjs(session.endedAt).hour() < 9,
-    ).length,
-    nightFocusCount: focusSessions.filter(
-      (session) => dayjs(session.endedAt).hour() >= 20,
-    ).length,
+    morningFocusCount: focusSessions.filter((session) => dayjs(session.endedAt).hour() < 9).length,
+    nightFocusCount: focusSessions.filter((session) => dayjs(session.endedAt).hour() >= 20).length,
     streakDays: getCurrentStreakDays(sessions, now),
     todayFocusMinutes: sumMinutes(todaySessions),
     todayPomodoros: todaySessions.length,
@@ -55,11 +47,7 @@ export function buildAchievementStats(
   };
 }
 
-function countSessionsByHour(
-  sessions: PomodoroSession[],
-  startHour: number,
-  endHour: number,
-) {
+function countSessionsByHour(sessions: PomodoroSession[], startHour: number, endHour: number) {
   return sessions.filter((session) => {
     const hour = dayjs(session.endedAt).hour();
     return hour >= startHour && hour < endHour;

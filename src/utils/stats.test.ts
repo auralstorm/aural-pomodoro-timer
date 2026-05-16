@@ -47,10 +47,7 @@ describe("stats utilities", () => {
   });
 
   it("calculates a seven-day weekly trend", () => {
-    const trend = calculateWeeklyTrend(
-      sessions,
-      new Date("2026-05-13T10:00:00.000Z"),
-    );
+    const trend = calculateWeeklyTrend(sessions, new Date("2026-05-13T10:00:00.000Z"));
 
     expect(trend).toHaveLength(7);
     expect(trend[trend.length - 1]).toMatchObject({ minutes: 25, pomodoros: 1 });
@@ -84,8 +81,6 @@ describe("stats utilities", () => {
   });
 
   it("calculates current focus streak days", () => {
-    expect(
-      getCurrentStreakDays(sessions, new Date("2026-05-13T10:00:00.000Z")),
-    ).toBe(2);
+    expect(getCurrentStreakDays(sessions, new Date("2026-05-13T10:00:00.000Z"))).toBe(2);
   });
 });

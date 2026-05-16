@@ -19,11 +19,7 @@ type ModalActionRowProps = {
   className?: string;
 };
 
-export function ModalActionRow({
-  primary,
-  secondary,
-  className,
-}: ModalActionRowProps) {
+export function ModalActionRow({ primary, secondary, className }: ModalActionRowProps) {
   return (
     <div className={cn("mt-6 grid grid-cols-2 gap-3", className)}>
       <AppButton

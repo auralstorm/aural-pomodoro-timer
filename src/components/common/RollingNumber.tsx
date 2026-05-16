@@ -175,13 +175,7 @@ function RollingDigitColumn({
   );
 }
 
-function RollingGlyph({
-  children,
-  className,
-}: {
-  children: string;
-  className?: string;
-}) {
+function RollingGlyph({ children, className }: { children: string; className?: string }) {
   return (
     <span
       aria-hidden="true"

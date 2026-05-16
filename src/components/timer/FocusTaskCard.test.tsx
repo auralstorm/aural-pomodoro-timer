@@ -45,9 +45,7 @@ describe("FocusTaskCard", () => {
     fireEvent.click(screen.getAllByRole("button", { name: "添加任务" })[0]);
 
     expect(screen.getByText("新建任务")).toBeInTheDocument();
-    expect(
-      screen.getByPlaceholderText("例如：阅读《高效能人士的七个习惯》"),
-    ).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("例如：阅读《高效能人士的七个习惯》")).toBeInTheDocument();
   });
 
   it("keeps a stable preview card height for task capacity", () => {
@@ -63,4 +61,3 @@ describe("FocusTaskCard", () => {
     );
   });
 });
-

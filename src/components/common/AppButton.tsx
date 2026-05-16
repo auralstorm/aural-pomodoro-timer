@@ -20,8 +20,7 @@ const variantClasses: Record<AppButtonVariant, string> = {
     "border-[var(--color-tomato-light)] bg-[var(--color-tomato-soft)] text-primary hover:bg-[var(--color-tomato-light)]",
   ghost:
     "border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground",
-  danger:
-    "border-transparent bg-destructive text-white hover:bg-destructive/90",
+  danger: "border-transparent bg-destructive text-white hover:bg-destructive/90",
   success:
     "border-transparent bg-[var(--color-success)] text-white hover:bg-[color-mix(in_srgb,var(--color-success)_88%,black)]",
 };
@@ -44,7 +43,9 @@ export function AppButton({
   ...props
 }: AppButtonProps) {
   const Comp = asChild ? Slot.Root : "button";
-  const content = asChild ? children : (
+  const content = asChild ? (
+    children
+  ) : (
     <>
       {icon}
       {children}

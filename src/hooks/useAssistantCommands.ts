@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { listen } from "@tauri-apps/api/event";
+import { safeListen } from "@/desktop/event";
 import { useNavigate } from "react-router-dom";
-import { AssistantCommand } from "@/types/assistant";
+import { AssistantCommand } from "@/constants/assistant";
 import { showMainWindow } from "@/desktop/window";
 import { useSettingsStore } from "@/stores/settingsStore";
 import { useTimerStore } from "@/stores/timerStore";
@@ -13,33 +13,33 @@ export function useAssistantCommands() {
 
   useEffect(() => {
     const unlisteners = Promise.all([
-      listen(AssistantCommand.StartFocus, () => {
+      safeListen(AssistantCommand.StartFocus, () => {
         const state = useTimerStore.getState();
         if (state.mode !== "focus") {
           switchMode("focus");
         }
         start();
       }),
-      listen(AssistantCommand.Pause, () => {
+      safeListen(AssistantCommand.Pause, () => {
         pause();
       }),
-      listen(AssistantCommand.Reset, () => {
+      safeListen(AssistantCommand.Reset, () => {
         reset();
       }),
-      listen(AssistantCommand.SwitchMode, () => {
+      safeListen(AssistantCommand.SwitchMode, () => {
         const state = useTimerStore.getState();
         const next = state.mode === "focus" ? "shortBreak" : "focus";
         switchMode(next);
       }),
-      listen(AssistantCommand.ShowStats, async () => {
+      safeListen(AssistantCommand.ShowStats, async () => {
         navigate("/statistics");
         await showMainWindow();
       }),
-      listen(AssistantCommand.OpenSettings, async () => {
+      safeListen(AssistantCommand.OpenSettings, async () => {
         navigate("/settings");
         await showMainWindow();
       }),
-      listen(AssistantCommand.HideAssistant, () => {
+      safeListen(AssistantCommand.HideAssistant, () => {
         useSettingsStore.getState().updateSettings({ assistantEnabled: false });
       }),
     ]);

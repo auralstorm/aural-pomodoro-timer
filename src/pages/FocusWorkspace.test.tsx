@@ -27,10 +27,7 @@ describe("FocusWorkspace", () => {
 
     expect(screen.getByText("今日任务")).toBeInTheDocument();
     expect(screen.getAllByRole("button", { name: "添加任务" })[0]).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "查看全部任务" })).toHaveAttribute(
-      "href",
-      "/tasks",
-    );
+    expect(screen.getByRole("link", { name: "查看全部任务" })).toHaveAttribute("href", "/tasks");
   });
 
   it("opens the task editor drawer from the focus task preview card", () => {
@@ -43,9 +40,7 @@ describe("FocusWorkspace", () => {
     fireEvent.click(screen.getAllByRole("button", { name: "添加任务" })[0]);
 
     expect(screen.getByText("新建任务")).toBeInTheDocument();
-    expect(
-      screen.getByPlaceholderText("例如：阅读《高效能人士的七个习惯》"),
-    ).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("例如：阅读《高效能人士的七个习惯》")).toBeInTheDocument();
   });
 
   it("resets a running focus round to idle when switching to another task from the preview card", () => {

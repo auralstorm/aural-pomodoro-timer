@@ -1,10 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import {
-  calculateRemainingSeconds,
-  formatSeconds,
-  minutesToSeconds,
-} from "./time";
+import { calculateRemainingSeconds, formatSeconds, minutesToSeconds } from "./time";
 
 describe("time utilities", () => {
   it("formats seconds as mm:ss", () => {

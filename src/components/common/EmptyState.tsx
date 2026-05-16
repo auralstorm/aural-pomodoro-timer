@@ -10,13 +10,7 @@ type EmptyStateProps = {
   className?: string;
 };
 
-export function EmptyState({
-  title,
-  description,
-  image,
-  children,
-  className,
-}: EmptyStateProps) {
+export function EmptyState({ title, description, image, children, className }: EmptyStateProps) {
   return (
     <div
       className={cn(
@@ -24,14 +18,10 @@ export function EmptyState({
         className,
       )}
     >
-      {image ? (
-        <img alt="" className="size-28 object-contain" loading="lazy" src={image} />
-      ) : null}
+      {image ? <img alt="" className="size-28 object-contain" loading="lazy" src={image} /> : null}
       <div className="flex flex-col gap-2">
         <h3 className="text-xl font-bold text-foreground">{title}</h3>
-        <p className="max-w-md text-sm leading-6 text-muted-foreground">
-          {description}
-        </p>
+        <p className="max-w-md text-sm leading-6 text-muted-foreground">{description}</p>
       </div>
       {children}
     </div>

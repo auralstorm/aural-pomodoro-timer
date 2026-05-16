@@ -31,18 +31,12 @@ export const useStatsStore = create<StatsStore>()(
   ),
 );
 
-function migrateLegacySessions(
-  persistedState: unknown,
-): { sessions: PomodoroSession[] } {
+function migrateLegacySessions(persistedState: unknown): { sessions: PomodoroSession[] } {
   if (Array.isArray(persistedState)) {
     return { sessions: persistedState };
   }
 
-  if (
-    persistedState &&
-    typeof persistedState === "object" &&
-    "data" in persistedState
-  ) {
+  if (persistedState && typeof persistedState === "object" && "data" in persistedState) {
     const data = (persistedState as { data: PomodoroSession[] }).data;
     return { sessions: Array.isArray(data) ? data : [] };
   }

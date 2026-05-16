@@ -7,10 +7,7 @@ type PlayableAudio = HTMLAudioElement;
 let activeWhiteNoise: PlayableAudio | null = null;
 let activeWhiteNoisePreset: Exclude<WhiteNoisePreset, "off"> | null = null;
 
-export async function playReminderTone(
-  preset: ReminderTonePreset,
-  volume: number,
-): Promise<void> {
+export async function playReminderTone(preset: ReminderTonePreset, volume: number): Promise<void> {
   const audio = createAudio(getReminderToneAudio(preset).src);
   audio.loop = false;
   audio.currentTime = 0;
@@ -19,10 +16,7 @@ export async function playReminderTone(
   await playSafely(audio);
 }
 
-export async function playWhiteNoise(
-  preset: WhiteNoisePreset,
-  volume: number,
-): Promise<void> {
+export async function playWhiteNoise(preset: WhiteNoisePreset, volume: number): Promise<void> {
   if (preset === "off") {
     stopWhiteNoise();
     return;

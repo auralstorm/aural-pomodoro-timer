@@ -29,12 +29,7 @@ describe("AchievementDrawer", () => {
   it("resets the category to all whenever it opens", () => {
     const onClose = vi.fn();
     const { rerender } = render(
-      <AchievementDrawer
-        achievements={achievements}
-        onClose={onClose}
-        open
-        summary={summary}
-      />,
+      <AchievementDrawer achievements={achievements} onClose={onClose} open summary={summary} />,
     );
 
     fireEvent.click(screen.getByRole("button", { name: "番茄" }));
@@ -49,12 +44,7 @@ describe("AchievementDrawer", () => {
       />,
     );
     rerender(
-      <AchievementDrawer
-        achievements={achievements}
-        onClose={onClose}
-        open
-        summary={summary}
-      />,
+      <AchievementDrawer achievements={achievements} onClose={onClose} open summary={summary} />,
     );
 
     expect(screen.getAllByTestId("achievement-card")).toHaveLength(24);

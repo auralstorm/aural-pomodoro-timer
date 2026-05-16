@@ -69,15 +69,13 @@ export function SegmentedTabs<T extends string>({
           }}
           type="button"
         >
-          {option.icon ? (
-            // <span className="inline-flex size-4 shrink-0 items-center justify-center">
+          {option.icon
+            ? // <span className="inline-flex size-4 shrink-0 items-center justify-center">
               option.icon
-            // </span>
-          ) : null}
+            : // </span>
+              null}
           {option.label}
-          {option.helper ? (
-            <span className="ml-1 text-xs font-medium">{option.helper}</span>
-          ) : null}
+          {option.helper ? <span className="ml-1 text-xs font-medium">{option.helper}</span> : null}
         </button>
       ))}
     </div>

@@ -41,9 +41,8 @@ export function TaskOverviewPanel({
     <aside>
       <AppCard className="flex flex-col gap-4 p-5">
         <header className="flex items-center gap-3">
-         
-            <img alt="" className="size-10 object-contain" src={iconTomatoCount} />
-          
+          <img alt="" className="size-10 object-contain" src={iconTomatoCount} />
+
           <h3 className="text-[20px] font-black tracking-tight">任务概览</h3>
         </header>
 
@@ -102,7 +101,12 @@ function CompletionOverviewCard({
   return (
     <div className="rounded-[28px] border border-border bg-background px-5 py-4 shadow-[0_10px_26px_rgba(255,107,107,0.04)]">
       <div className="grid grid-cols-[100px_minmax(0,1fr)] items-center gap-4">
-        <ProgressRing className="justify-self-start" size={80} strokeWidth={10} value={completionRate}>
+        <ProgressRing
+          className="justify-self-start"
+          size={80}
+          strokeWidth={10}
+          value={completionRate}
+        >
           <div className="space-y-0.5">
             <div className="flex items-center justify-center text-[18px] font-black leading-none text-primary">
               <RollingNumber

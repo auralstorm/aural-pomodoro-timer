@@ -1,5 +1,3 @@
-export const STORAGE_VERSION = 1 as const;
-
 export const STORAGE_KEYS = {
   TASKS: "tomato-focus:tasks",
   CURRENT_TASK: "tomato-focus:current-task",

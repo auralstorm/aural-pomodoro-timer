@@ -31,7 +31,7 @@ export function FocusTaskList({
   if (tasks.length === 0) {
     return (
       <div className="flex h-full min-h-[212px] flex-1 items-stretch">
-        <FocusTaskEmptyState onCreateTask={onCreateTask} />
+        <FocusTaskEmptyState />
       </div>
     );
   }

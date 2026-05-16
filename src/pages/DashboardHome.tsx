@@ -1,12 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  BarChart3,
-  CalendarCheck,
-  Clock,
-  Pause,
-  Play,
-  Plus,
-} from "lucide-react";
+import { BarChart3, CalendarCheck, Clock, Pause, Play, Plus } from "lucide-react";
 import {
   CartesianGrid,
   Line,
@@ -34,6 +27,7 @@ import { useTaskStore } from "@/stores/taskStore";
 import {
   calculateTodayStats,
   calculateWeeklyTrend,
+  calculateCompletionRate,
   getCurrentStreakDays,
 } from "@/utils/stats";
 import { formatSeconds, getModeLabel } from "@/utils/time";
@@ -52,7 +46,11 @@ export function DashboardHome() {
 
   return (
     <PageLayout>
-      <AppCard className="grid min-h-[300px] grid-cols-[1fr_520px] items-center gap-8 overflow-hidden p-10 max-xl:grid-cols-1" tone="hero" style={{background: "url(/assets/hero.png) no-repeat"}}>
+      <AppCard
+        className="grid min-h-[300px] grid-cols-[1fr_520px] items-center gap-8 overflow-hidden p-10 max-xl:grid-cols-1"
+        tone="hero"
+        style={{ background: "url(/assets/hero.png) no-repeat" }}
+      >
         <div className="flex flex-col items-start gap-6">
           <div>
             <h1 className="text-5xl font-black leading-tight text-foreground">
@@ -74,14 +72,29 @@ export function DashboardHome() {
             </AppButton>
           </div>
         </div>
-        {/* <img alt="" className="h-80 w-full object-contain" src={heroHome} /> */}
       </AppCard>
 
       <div className="grid grid-cols-4 gap-5 max-xl:grid-cols-2">
-        <StatCard icon={<Clock className="size-7" />} label="今日专注时长" value={`${(today.focusMinutes / 60).toFixed(1)}h`} />
-        <StatCard icon={<img alt="" className="size-10 object-contain" src={logoSymbol} />} label="今日完成番茄数" value={`${today.completedPomodoros}`} />
-        <StatCard icon={<CalendarCheck className="size-7" />} label="连续打卡天数" value={`${currentStreak} 天`} />
-        <StatCard icon={<BarChart3 className="size-7" />} label="任务完成率" value={`${getTaskCompletionRate(tasks)}%`} />
+        <StatCard
+          icon={<Clock className="size-7" />}
+          label="今日专注时长"
+          value={`${(today.focusMinutes / 60).toFixed(1)}h`}
+        />
+        <StatCard
+          icon={<img alt="" className="size-10 object-contain" src={logoSymbol} />}
+          label="今日完成番茄数"
+          value={`${today.completedPomodoros}`}
+        />
+        <StatCard
+          icon={<CalendarCheck className="size-7" />}
+          label="连续打卡天数"
+          value={`${currentStreak} 天`}
+        />
+        <StatCard
+          icon={<BarChart3 className="size-7" />}
+          label="任务完成率"
+          value={`${calculateCompletionRate(tasks)}%`}
+        />
       </div>
 
       <div className="grid grid-cols-[360px_minmax(0,1fr)_420px] gap-6 max-2xl:grid-cols-[340px_minmax(0,1fr)_380px] max-xl:grid-cols-1">
@@ -90,7 +103,10 @@ export function DashboardHome() {
         <AppCard className="flex min-h-80 flex-col gap-4">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-bold">今日任务</h2>
-            <Link className="inline-flex items-center gap-1 text-sm font-semibold text-primary" to="/tasks">
+            <Link
+              className="inline-flex items-center gap-1 text-sm font-semibold text-primary"
+              to="/tasks"
+            >
               <Plus aria-hidden="true" className="size-4" />
               添加任务
             </Link>
@@ -145,16 +161,16 @@ export function DashboardHome() {
           )}
         </AppCard>
       </div>
-      {/* <TipBar>每一颗番茄，都是成长的记录。</TipBar> */}
     </PageLayout>
   );
 }
 
 function DashboardTimerCard() {
   const timer = usePomodoroTimer();
-  const progress = timer.totalSeconds > 0
-    ? ((timer.totalSeconds - timer.remainingSeconds) / timer.totalSeconds) * 100
-    : 0;
+  const progress =
+    timer.totalSeconds > 0
+      ? ((timer.totalSeconds - timer.remainingSeconds) / timer.totalSeconds) * 100
+      : 0;
   const isRunning = timer.status === "running";
 
   return (
@@ -197,10 +213,4 @@ function DashboardTimerCard() {
       </div>
     </AppCard>
   );
-}
-
-function getTaskCompletionRate(tasks: { status: string }[]) {
-  if (tasks.length === 0) return 0;
-  const completed = tasks.filter((task) => task.status === "completed").length;
-  return Math.round((completed / tasks.length) * 100);
 }

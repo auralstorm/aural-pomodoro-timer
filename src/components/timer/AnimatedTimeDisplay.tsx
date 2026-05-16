@@ -7,7 +7,9 @@ type AnimatedTimeDisplayProps = {
 };
 
 export function AnimatedTimeDisplay({ seconds, className }: AnimatedTimeDisplayProps) {
-  const [minutesTens, minutesOnes, secondsTens, secondsOnes] = formatSeconds(seconds).replace(":", "").split("");
+  const [minutesTens, minutesOnes, secondsTens, secondsOnes] = formatSeconds(seconds)
+    .replace(":", "")
+    .split("");
 
   return (
     <span

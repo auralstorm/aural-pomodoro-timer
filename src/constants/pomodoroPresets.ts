@@ -47,11 +47,12 @@ export function resolvePomodoroPresetKey(values: {
   longBreakMinutes: number;
   longBreakInterval: number;
 }): PomodoroPresetKey {
-  const matchedPreset = POMODORO_PRESETS.find((preset) =>
-    preset.focusMinutes === values.focusMinutes &&
-    preset.shortBreakMinutes === values.shortBreakMinutes &&
-    preset.longBreakMinutes === values.longBreakMinutes &&
-    preset.longBreakInterval === values.longBreakInterval,
+  const matchedPreset = POMODORO_PRESETS.find(
+    (preset) =>
+      preset.focusMinutes === values.focusMinutes &&
+      preset.shortBreakMinutes === values.shortBreakMinutes &&
+      preset.longBreakMinutes === values.longBreakMinutes &&
+      preset.longBreakInterval === values.longBreakInterval,
   );
 
   return matchedPreset?.key ?? "custom";

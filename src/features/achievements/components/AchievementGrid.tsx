@@ -10,9 +10,7 @@ export function AchievementGrid({ achievements }: AchievementGridProps) {
     return (
       <div className="rounded-[24px] border border-dashed border-border bg-card p-8 text-center">
         <p className="text-base font-black text-foreground">这里暂时没有成就</p>
-        <p className="mt-2 text-sm text-muted-foreground">
-          换个分类看看，或者先开始一次专注吧。
-        </p>
+        <p className="mt-2 text-sm text-muted-foreground">换个分类看看，或者先开始一次专注吧。</p>
       </div>
     );
   }

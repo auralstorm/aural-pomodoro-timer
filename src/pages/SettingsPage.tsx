@@ -72,9 +72,6 @@ export function SettingsPage() {
           >
             恢复默认
           </AppButton>
-          {/* <AppButton icon={<Save aria-hidden="true" className="size-5" />} onClick={saveSettings}>
-            保存设置
-          </AppButton> */}
         </div>
       }
       subtitle="调整你的番茄节奏，让专注更适合自己"
@@ -151,9 +148,6 @@ export function SettingsPage() {
           <LocalDataSection onClearData={() => openModal("clearDataConfirm")} />
         </div>
       </div>
-      {/* <TipBar>
-        适合自己的番茄节奏，才更容易长期坚持。
-      </TipBar> */}
     </PageLayout>
   );
 }

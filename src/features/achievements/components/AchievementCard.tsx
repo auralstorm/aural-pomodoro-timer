@@ -10,21 +10,14 @@ type AchievementCardProps = {
 };
 
 export function AchievementCard({ achievement }: AchievementCardProps) {
-  const progress = Math.min(
-    100,
-    Math.round((achievement.current / achievement.target) * 100),
-  );
-  const icon = achievement.unlocked
-    ? achievement.unlockedIcon
-    : achievement.lockedIcon;
+  const progress = Math.min(100, Math.round((achievement.current / achievement.target) * 100));
+  const icon = achievement.unlocked ? achievement.unlockedIcon : achievement.lockedIcon;
 
   return (
     <article
       className={cn(
         "rounded-[24px] border bg-card p-4 shadow-[0_8px_24px_rgba(58,46,42,0.05)] transition hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(58,46,42,0.08)]",
-        achievement.unlocked
-          ? "border-[var(--color-tomato-light)]"
-          : "border-border",
+        achievement.unlocked ? "border-[var(--color-tomato-light)]" : "border-border",
       )}
       data-testid="achievement-card"
     >

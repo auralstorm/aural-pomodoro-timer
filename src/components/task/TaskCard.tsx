@@ -1,11 +1,11 @@
-import { AlertCircle, Check, Circle, Edit3, Play, Star, Trash2 } from "lucide-react";
+import { Check, Edit3, Play, Trash2 } from "lucide-react";
 
 import { AppButton } from "@/components/common/AppButton";
 import { Tag } from "@/components/common/Tag";
 import type { Task } from "@/types/task";
 import { cn } from "@/lib/utils";
 import IconTomato from "@/assets/icons/icon-tomato-count.svg";
-
+import { PRIORITY_MAP, TASK_STATUS_LABEL } from "@/constants/task";
 
 type TaskCardProps = {
   task: Task;
@@ -17,12 +17,6 @@ type TaskCardProps = {
   onDelete?: (task: Task) => void;
 };
 
-export const priorityMap = {
-  normal: { label: "普通", tone: "success" as const, icon: Circle },
-  important: { label: "重要", tone: "warning" as const, icon: Star },
-  urgent: { label: "紧急", tone: "danger" as const, icon: AlertCircle },
-};
-
 export function TaskCard({
   task,
   isCurrent,
@@ -32,10 +26,14 @@ export function TaskCard({
   onEdit,
   onDelete,
 }: TaskCardProps) {
-  const priority = priorityMap[task.priority];
+  const priority = PRIORITY_MAP[task.priority];
   const PriorityIcon = priority.icon;
   const isCompleted = task.status === "completed";
-  const statusLabel = isCompleted ? "已完成" : isCurrent ? "当前专注" : "待开始";
+  const statusLabel = isCompleted
+    ? TASK_STATUS_LABEL.completed
+    : isCurrent
+      ? "当前专注"
+      : TASK_STATUS_LABEL.pending;
   const statusTone = isCompleted ? "success" : isCurrent ? "focus" : "neutral";
 
   if (compact) {
@@ -45,7 +43,8 @@ export function TaskCard({
           "grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-[var(--radius-lg)] border border-border bg-card p-4 transition",
           !isCompleted && "cursor-pointer hover:border-primary/50",
           isCurrent && "border-primary bg-[var(--color-tomato-soft)]",
-          isCompleted && "border-[color-mix(in_srgb,var(--color-success)_40%,white)] bg-[color-mix(in_srgb,var(--color-success)_10%,white)]",
+          isCompleted &&
+            "border-[color-mix(in_srgb,var(--color-success)_40%,white)] bg-[color-mix(in_srgb,var(--color-success)_10%,white)]",
         )}
         onClick={() => {
           if (!isCompleted) onStart?.(task.id);
@@ -69,7 +68,9 @@ export function TaskCard({
 
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className={cn("truncate text-base font-bold", isCompleted && "text-muted-foreground")}>
+            <h3
+              className={cn("truncate text-base font-bold", isCompleted && "text-muted-foreground")}
+            >
               {task.title}
             </h3>
             {isCurrent ? <Tag tone="focus">当前专注</Tag> : null}
@@ -78,7 +79,8 @@ export function TaskCard({
 
         <div className="flex items-center gap-2">
           <Tag tone={isCompleted ? "success" : "focus"}>
-            <img alt="番茄" src={IconTomato} className="w-7.5 inline" /> {task.completedPomodoros} / {task.estimatedPomodoros}
+            <img alt="番茄" src={IconTomato} className="w-7.5 inline" /> {task.completedPomodoros} /{" "}
+            {task.estimatedPomodoros}
           </Tag>
         </div>
       </article>
@@ -90,7 +92,8 @@ export function TaskCard({
       className={cn(
         "grid grid-cols-[minmax(0,1.8fr)_120px_120px_92px_120px_88px] items-center gap-4 rounded-[var(--radius-lg)] border border-border bg-card px-4 py-4 transition max-xl:grid-cols-1",
         isCurrent && "border-primary bg-[var(--color-tomato-soft)]",
-        isCompleted && "border-[color-mix(in_srgb,var(--color-success)_40%,white)] bg-[color-mix(in_srgb,var(--color-success)_10%,white)]",
+        isCompleted &&
+          "border-[color-mix(in_srgb,var(--color-success)_40%,white)] bg-[color-mix(in_srgb,var(--color-success)_10%,white)]",
       )}
     >
       <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-4">
@@ -113,10 +116,7 @@ export function TaskCard({
         <div className="min-w-0">
           <div className="flex min-w-0 items-center gap-2">
             <h3
-              className={cn(
-                "truncate text-base font-bold",
-                isCompleted && "text-muted-foreground",
-              )}
+              className={cn("truncate text-base font-bold", isCompleted && "text-muted-foreground")}
               title={task.title}
             >
               {task.title}
@@ -143,7 +143,8 @@ export function TaskCard({
 
       <div className="flex items-center max-xl:justify-start">
         <Tag className="justify-center whitespace-nowrap" tone={isCompleted ? "success" : "focus"}>
-          <img alt="番茄" src={IconTomato} className="w-7.5 inline" /> {task.completedPomodoros} / {task.estimatedPomodoros}
+          <img alt="番茄" src={IconTomato} className="w-7.5 inline" /> {task.completedPomodoros} /{" "}
+          {task.estimatedPomodoros}
         </Tag>
       </div>
 

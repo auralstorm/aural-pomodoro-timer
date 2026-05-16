@@ -24,28 +24,17 @@ function buildTask(id: string, title: string, overrides: BuildTaskOverrides = {}
 }
 
 describe("FocusTaskList", () => {
-  it("renders the empty state and forwards create actions when no tasks exist", () => {
-    const onCreateTask = vi.fn();
-
-    render(<FocusTaskList onCreateTask={onCreateTask} tasks={[]} />);
-
-    expect(
-      screen.getByRole("heading", { name: "还没有任务" }),
-    ).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: "添加任务" }));
-
-    expect(onCreateTask).toHaveBeenCalledTimes(1);
-  });
-
-  it("does not render an add-task button when no create callback is provided", () => {
+  it("renders the empty state when no tasks exist", () => {
     render(<FocusTaskList tasks={[]} />);
 
-    expect(
-      screen.getByRole("heading", { name: "还没有任务" }),
-    ).toBeInTheDocument();
-    expect(
-      screen.queryByRole("button", { name: "添加任务" }),
-    ).not.toBeInTheDocument();
+    expect(screen.getByText("今天先安排一件最重要的事")).toBeInTheDocument();
+  });
+
+  it("renders empty state without an add-task button when no create callback is provided", () => {
+    render(<FocusTaskList tasks={[]} />);
+
+    expect(screen.getByText("今天先安排一件最重要的事")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "添加任务" })).not.toBeInTheDocument();
   });
 
   it("sorts current task first, unfinished tasks before completed, and truncates the preview to four items", () => {

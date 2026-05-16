@@ -2,6 +2,7 @@ export type AppTheme = "cream" | "tomato" | "mint" | "darkFocus";
 export type PomodoroPreset = "classic" | "deepFocus" | "light" | "custom";
 export type ReminderTonePreset = "soft" | "soothing" | "pikachu" | "doraemon";
 export type WhiteNoisePreset = "off" | "rain" | "forest" | "stream" | "fire";
+export type ActiveWhiteNoisePreset = Exclude<WhiteNoisePreset, "off">;
 
 export type SettingsStateData = {
   focusMinutes: number;

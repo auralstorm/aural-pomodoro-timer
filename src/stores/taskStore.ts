@@ -2,7 +2,6 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 import { STORAGE_KEYS } from "@/constants/storage";
-import { clearTimerTaskBindingForTask } from "@/features/focus/focusTaskBinding";
 import type { CreateTaskInput, Task, UpdateTaskInput } from "@/types/task";
 import { createId } from "@/utils/id";
 
@@ -46,9 +45,7 @@ export const useTaskStore = create<TaskStore>()(
       updateTask: (taskId, input) => {
         const isCompletingTask = input.status === "completed";
         const currentTaskId =
-          isCompletingTask && get().currentTaskId === taskId
-            ? undefined
-            : get().currentTaskId;
+          isCompletingTask && get().currentTaskId === taskId ? undefined : get().currentTaskId;
         const tasks = get().tasks.map((task) =>
           task.id === taskId
             ? {
@@ -61,24 +58,17 @@ export const useTaskStore = create<TaskStore>()(
             : task,
         );
         set({ tasks, currentTaskId });
-
-        if (isCompletingTask) {
-          clearTimerTaskBindingForTask(taskId);
-        }
       },
       deleteTask: (taskId) => {
-        const currentTaskId =
-          get().currentTaskId === taskId ? undefined : get().currentTaskId;
+        const currentTaskId = get().currentTaskId === taskId ? undefined : get().currentTaskId;
         set({
           tasks: get().tasks.filter((task) => task.id !== taskId),
           currentTaskId,
         });
-        clearTimerTaskBindingForTask(taskId);
       },
       completeTask: (taskId) => {
         const now = new Date().toISOString();
-        const currentTaskId =
-          get().currentTaskId === taskId ? undefined : get().currentTaskId;
+        const currentTaskId = get().currentTaskId === taskId ? undefined : get().currentTaskId;
         const tasks = get().tasks.map((task) =>
           task.id === taskId
             ? {
@@ -90,12 +80,10 @@ export const useTaskStore = create<TaskStore>()(
             : task,
         );
         set({ tasks, currentTaskId });
-        clearTimerTaskBindingForTask(taskId);
       },
       releaseCurrentTask: (taskId) => {
         const targetTaskId = taskId ?? get().currentTaskId;
-        const shouldClearCurrent =
-          !targetTaskId || get().currentTaskId === targetTaskId;
+        const shouldClearCurrent = !targetTaskId || get().currentTaskId === targetTaskId;
         const tasks = get().tasks.map((task) => {
           if (task.id !== targetTaskId) {
             return task;
@@ -116,8 +104,6 @@ export const useTaskStore = create<TaskStore>()(
           tasks,
           currentTaskId: shouldClearCurrent ? undefined : get().currentTaskId,
         });
-
-        clearTimerTaskBindingForTask(targetTaskId);
       },
       setCurrentTask: (taskId) => {
         const tasks = get().tasks.map((task) => {
@@ -164,10 +150,6 @@ export const useTaskStore = create<TaskStore>()(
             : get().currentTaskId;
         set({ tasks, currentTaskId });
 
-        if (updatedTask?.status === "completed") {
-          clearTimerTaskBindingForTask(taskId);
-        }
-
         return updatedTask;
       },
       clearTasks: () => {
@@ -184,11 +166,7 @@ export const useTaskStore = create<TaskStore>()(
 );
 
 function migrateLegacyTasks(persistedState: unknown): TaskStoreData {
-  if (
-    persistedState &&
-    typeof persistedState === "object" &&
-    "data" in persistedState
-  ) {
+  if (persistedState && typeof persistedState === "object" && "data" in persistedState) {
     const data = (persistedState as { data: Partial<TaskStoreData> }).data;
     return {
       tasks: data.tasks ?? [],

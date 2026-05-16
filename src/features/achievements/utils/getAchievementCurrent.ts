@@ -1,9 +1,6 @@
 import type { AchievementStats } from "../types";
 
-export function getAchievementCurrent(
-  id: string,
-  stats: AchievementStats,
-): number {
+export function getAchievementCurrent(id: string, stats: AchievementStats): number {
   switch (id) {
     case "streak-3-days":
     case "streak-7-days":

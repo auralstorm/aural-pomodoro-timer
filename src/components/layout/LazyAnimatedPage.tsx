@@ -10,9 +10,5 @@ const PageSuspenseFallback = () => (
 );
 
 export function LazyAnimatedPage({ component }: { component: ReactNode }) {
-  return (
-    <Suspense fallback={<PageSuspenseFallback />}>
-      {component}
-    </Suspense>
-  );
+  return <Suspense fallback={<PageSuspenseFallback />}>{component}</Suspense>;
 }

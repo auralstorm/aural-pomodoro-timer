@@ -1,4 +1,4 @@
-import { Filter, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 import { AppButton } from "@/components/common/AppButton";
 import { SegmentedTabs } from "@/components/common/SegmentedTabs";
@@ -18,14 +18,11 @@ export function TaskToolbar({ filter, onFilterChange, onCreateTask }: TaskToolba
     <div className="flex items-center justify-between gap-4 max-md:flex-col max-md:items-stretch">
       <SegmentedTabs options={taskFilterOptions} onChange={onFilterChange} value={filter} />
       <div className="flex items-center gap-3 self-end max-md:self-stretch">
-        {/* <AppButton
-          icon={<Filter aria-hidden="true" className="size-4" />}
-          size="sm"
-          variant="ghost"
+        <AppButton
+          className="h-10 rounded-2xl"
+          icon={<Plus aria-hidden="true" className="size-5" />}
+          onClick={onCreateTask}
         >
-          筛选
-        </AppButton> */}
-        <AppButton className="h-10 rounded-2xl" icon={<Plus aria-hidden="true" className="size-5" />} onClick={onCreateTask}>
           新建任务
         </AppButton>
       </div>

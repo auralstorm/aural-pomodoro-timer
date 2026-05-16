@@ -29,7 +29,9 @@ export function TaskCompleteModal({
 
   return (
     <AppDialog
-      description={taskTitle ? `“${taskTitle}” 已经达成目标，继续保持这份节奏。` : "今天的小目标又完成了一个。"}
+      description={
+        taskTitle ? `“${taskTitle}” 已经达成目标，继续保持这份节奏。` : "今天的小目标又完成了一个。"
+      }
       onOpenChange={onOpenChange}
       open={open}
       size="md"

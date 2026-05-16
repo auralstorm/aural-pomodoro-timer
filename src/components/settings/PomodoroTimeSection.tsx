@@ -12,7 +12,10 @@ type PomodoroTimeSectionProps = {
   longBreakMinutes: number;
   longBreakInterval: number;
   pomodoroPreset: PomodoroPresetKey;
-  onNumberChange: (key: "focusMinutes" | "shortBreakMinutes" | "longBreakMinutes" | "longBreakInterval", value: number) => void;
+  onNumberChange: (
+    key: "focusMinutes" | "shortBreakMinutes" | "longBreakMinutes" | "longBreakInterval",
+    value: number,
+  ) => void;
   onPresetSelect: (preset: (typeof POMODORO_PRESETS)[number]) => void;
 };
 

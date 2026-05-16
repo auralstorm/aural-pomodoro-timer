@@ -54,8 +54,7 @@ export const useTimerStore = create<TimerStore>()(
         const now = new Date().toISOString();
         const pausedAccumulatedMs =
           state.status === "paused" && state.pausedAt
-            ? state.pausedAccumulatedMs +
-              (Date.parse(now) - Date.parse(state.pausedAt))
+            ? state.pausedAccumulatedMs + (Date.parse(now) - Date.parse(state.pausedAt))
             : state.pausedAccumulatedMs;
 
         updateState(get, set, {
@@ -115,11 +114,7 @@ export const useTimerStore = create<TimerStore>()(
 );
 
 function migrateLegacyTimer(persistedState: unknown): TimerStateSnapshot {
-  if (
-    persistedState &&
-    typeof persistedState === "object" &&
-    "data" in persistedState
-  ) {
+  if (persistedState && typeof persistedState === "object" && "data" in persistedState) {
     return {
       ...DEFAULT_TIMER,
       ...(persistedState as { data: Partial<TimerStateSnapshot> }).data,

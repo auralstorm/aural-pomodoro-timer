@@ -47,3 +47,30 @@ export function getModeLabel(mode: "focus" | "shortBreak" | "longBreak"): string
   if (mode === "shortBreak") return "短休息";
   return "长休息";
 }
+
+// ── 分钟 / 小时格式化 ──────────────────────────────
+
+/** "25 分钟" */
+export function formatMinutesLabel(minutes: number): string {
+  return `${minutes} 分钟`;
+}
+
+/** 分钟 → 中文可读时长："1 小时 30 分钟" / "45 分钟" / "2 小时" */
+export function formatMinutesToChinese(minutes: number): string {
+  const safe = Math.max(0, Math.round(minutes));
+  const hours = Math.floor(safe / 60);
+  const rest = safe % 60;
+
+  if (hours > 0 && rest > 0) return `${hours} 小时 ${rest} 分钟`;
+  if (hours > 0) return `${hours} 小时`;
+  return `${rest} 分钟`;
+}
+
+/** 分钟 → 紧凑英文时长："1.5h" / "45 分钟" / "0h" */
+export function formatFocusHours(minutes: number): string {
+  if (minutes <= 0) return "0h";
+  if (minutes < 60) return `${minutes} 分钟`;
+
+  const hours = minutes / 60;
+  return Number.isInteger(hours) ? `${hours}h` : `${hours.toFixed(1)}h`;
+}

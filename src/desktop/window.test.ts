@@ -7,7 +7,7 @@ const unminimize = vi.fn();
 const setFocus = vi.fn();
 const onCloseRequested = vi.fn();
 let closeHandler: ((event: { preventDefault: () => void }) => void | Promise<void>) | undefined;
-let unlisten = vi.fn();
+const unlisten = vi.fn();
 
 vi.mock("@tauri-apps/api/window", () => ({
   getCurrentWindow: () => ({

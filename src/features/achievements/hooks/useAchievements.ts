@@ -14,18 +14,12 @@ export function useAchievements() {
   const unlockedMap = useAchievementStore((state) => state.unlockedMap);
   const recordUnlocked = useAchievementStore((state) => state.recordUnlocked);
 
-  const stats = useMemo(
-    () => buildAchievementStats(sessions, tasks),
-    [sessions, tasks],
-  );
+  const stats = useMemo(() => buildAchievementStats(sessions, tasks), [sessions, tasks]);
   const achievements = useMemo(
     () => buildAchievements(achievementConfigs, stats, unlockedMap),
     [stats, unlockedMap],
   );
-  const summary = useMemo(
-    () => buildAchievementSummary(achievements),
-    [achievements],
-  );
+  const summary = useMemo(() => buildAchievementSummary(achievements), [achievements]);
   const newlyUnlockedIds = useMemo(
     () =>
       achievements

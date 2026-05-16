@@ -64,36 +64,27 @@ export function TimerPanel({
   const skipLabel = mode === "focus" ? "提前结束" : "跳过休息";
   const displayTitle =
     currentTaskTitle ??
-    (mode === "focus" && (status === "running" || status === "paused")
-      ? "自由专注"
-      : "准备开始");
+    (mode === "focus" && (status === "running" || status === "paused") ? "自由专注" : "准备开始");
 
   return (
     <AppCard className="relative overflow-hidden p-10" tone="hero">
       <TimerPanelDecorLayer />
-      {/* <div className="pointer-events-none absolute -right-4 bottom-4 hidden w-72 opacity-95 lg:block">
-        <img alt="" className="w-full object-contain" src={mascotFocus} />
-      </div> */}
 
       <div className="relative z-10 flex flex-col items-center gap-8 pr-0">
         <div className="flex w-full max-w-[560px] flex-col items-center gap-3 text-center">
           <div className="w-full">
-           
             <h2
               className="mx-auto max-w-full truncate text-3xl font-black text-foreground text-center"
               title={displayTitle}
             >
               {displayTitle}
             </h2>
-            {/* <p className="mt-2 text-muted-foreground">
-              {currentTaskTitle ? "保持专注，让每一刻都更有意义。" : "选择任务或直接开始一轮番茄。"}
-            </p> */}
           </div>
         </div>
 
         <ProgressRing value={progress}>
           <div className="flex flex-col items-center gap-3">
-             <Tag
+            <Tag
               className="inline-flex border border-border px-4 py-1.5"
               tone={mode === "focus" ? "focus" : "rest"}
             >
@@ -107,12 +98,23 @@ export function TimerPanel({
           </div>
         </ProgressRing>
 
-        <SegmentedTabs value={mode} options={modeOptions} onChange={onModeChange} className="mt-10" />
+        <SegmentedTabs
+          value={mode}
+          options={modeOptions}
+          onChange={onModeChange}
+          className="mt-10"
+        />
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <AppButton
             className="rounded-[30px] w-[180px]"
-            icon={isRunning ? <Pause aria-hidden="true" className="size-5" /> : <Play aria-hidden="true" className="size-5" />}
+            icon={
+              isRunning ? (
+                <Pause aria-hidden="true" className="size-5" />
+              ) : (
+                <Play aria-hidden="true" className="size-5" />
+              )
+            }
             onClick={isRunning ? onPause : onStart}
             size="lg"
           >

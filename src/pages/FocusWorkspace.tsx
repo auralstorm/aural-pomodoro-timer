@@ -32,7 +32,6 @@ export function FocusWorkspace() {
           <FocusTools />
         </aside>
       </div>
-      {/* <TipBar>专注 25 分钟，休息 5 分钟，让番茄钟帮你保持高效。</TipBar> */}
     </PageLayout>
   );
 }

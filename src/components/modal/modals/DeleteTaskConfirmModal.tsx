@@ -26,11 +26,7 @@ export function DeleteTaskConfirmModal({
       size="sm"
       title="确定删除这个任务吗？"
     >
-      <img
-        alt=""
-        className="mx-auto mt-2 h-32 w-32 object-contain"
-        src={deleteArt}
-      />
+      <img alt="" className="mx-auto mt-2 h-32 w-32 object-contain" src={deleteArt} />
       <ModalActionRow
         primary={{
           label: "删除任务",

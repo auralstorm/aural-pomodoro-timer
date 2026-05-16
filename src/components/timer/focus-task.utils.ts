@@ -1,30 +1,5 @@
-import type { Task, TaskPriority } from "@/types/task";
-
-type PriorityMeta = {
-  label?: string;
-  dotClassName?: string;
-  rank: number;
-};
-
-const priorityMetaMap: Record<TaskPriority, PriorityMeta> = {
-  normal: {
-    rank: 2,
-  },
-  important: {
-    label: "重要",
-    dotClassName: "bg-[var(--color-warning)]",
-    rank: 1,
-  },
-  urgent: {
-    label: "高优先级",
-    dotClassName: "bg-destructive",
-    rank: 0,
-  },
-};
-
-export function getTaskPriorityMeta(priority: TaskPriority): PriorityMeta {
-  return priorityMetaMap[priority];
-}
+import type { Task } from "@/types/task";
+import { PRIORITY_MAP } from "@/constants/task";
 
 export function sortFocusQueueTasks(
   tasks: Task[],
@@ -39,8 +14,8 @@ export function sortFocusQueueTasks(
       return leftFocusRank - rightFocusRank;
     }
 
-    const leftPriority = getTaskPriorityMeta(left.priority).rank;
-    const rightPriority = getTaskPriorityMeta(right.priority).rank;
+    const leftPriority = PRIORITY_MAP[left.priority].rank;
+    const rightPriority = PRIORITY_MAP[right.priority].rank;
 
     if (leftPriority !== rightPriority) {
       return leftPriority - rightPriority;

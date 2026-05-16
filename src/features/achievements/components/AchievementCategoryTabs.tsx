@@ -9,10 +9,7 @@ type AchievementCategoryTabsProps = {
   onChange: (value: AchievementCategoryFilter) => void;
 };
 
-export function AchievementCategoryTabs({
-  value,
-  onChange,
-}: AchievementCategoryTabsProps) {
+export function AchievementCategoryTabs({ value, onChange }: AchievementCategoryTabsProps) {
   const options = achievementCategories.map((category) => ({
     ...category,
     icon: (

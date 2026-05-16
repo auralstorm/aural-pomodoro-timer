@@ -47,9 +47,7 @@ export function ProgressRing({
           className="transition-[stroke-dashoffset] duration-500"
         />
       </svg>
-      <div className="absolute inset-0 grid place-items-center text-center">
-        {children}
-      </div>
+      <div className="absolute inset-0 grid place-items-center text-center">{children}</div>
     </div>
   );
 }

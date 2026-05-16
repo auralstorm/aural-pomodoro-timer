@@ -12,11 +12,7 @@ const toneClasses = {
   hero: "bg-[linear-gradient(135deg,var(--color-tomato-soft)_0%,var(--color-card-bg)_62%,var(--color-cream-orange)_160%)]",
 };
 
-export function AppCard({
-  className,
-  tone = "default",
-  ...props
-}: AppCardProps) {
+export function AppCard({ className, tone = "default", ...props }: AppCardProps) {
   return (
     <section
       className={cn(

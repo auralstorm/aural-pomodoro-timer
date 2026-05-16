@@ -1,10 +1,4 @@
-export type AchievementCategory =
-  | "habit"
-  | "pomodoro"
-  | "daily"
-  | "weekly"
-  | "task"
-  | "special";
+export type AchievementCategory = "habit" | "pomodoro" | "daily" | "weekly" | "task" | "special";
 
 export type AchievementCategoryFilter = AchievementCategory | "all";
 

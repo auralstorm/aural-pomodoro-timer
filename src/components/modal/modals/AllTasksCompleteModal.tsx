@@ -59,7 +59,11 @@ export function AllTasksCompleteModal({
             },
           ]}
         />
-        <img alt="" className="mx-auto h-[220px] w-full max-w-[220px] object-contain" src={successArt} />
+        <img
+          alt=""
+          className="mx-auto h-[220px] w-full max-w-[220px] object-contain"
+          src={successArt}
+        />
       </div>
       <ModalActionRow
         primary={{

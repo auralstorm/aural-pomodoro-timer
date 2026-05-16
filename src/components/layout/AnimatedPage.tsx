@@ -10,7 +10,7 @@ const pageVariants = {
 };
 
 // 统一包装组件
-function AnimatedPage({
+export function AnimatedPage({
   children,
   className = "",
 }: {
@@ -18,13 +18,8 @@ function AnimatedPage({
   className?: string;
 }) {
   return (
-    <motion.div
-      {...pageVariants}
-      className={`h-full w-full ${className}`}
-    >
+    <motion.div {...pageVariants} className={`h-full w-full ${className}`}>
       {children}
     </motion.div>
   );
 }
-
-export default AnimatedPage;

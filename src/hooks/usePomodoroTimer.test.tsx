@@ -74,12 +74,9 @@ describe("usePomodoroTimer", () => {
   });
 
   it("plays reminder audio on focus completion even when desktop notifications are disabled", () => {
-    useAchievementStore.getState().recordUnlocked([
-      "morning-focus",
-      "afternoon-restart",
-      "night-focus",
-      "weekend-focus",
-    ]);
+    useAchievementStore
+      .getState()
+      .recordUnlocked(["morning-focus", "afternoon-restart", "night-focus", "weekend-focus"]);
 
     useSettingsStore.getState().updateSettings({
       soundEnabled: true,
@@ -147,13 +144,15 @@ describe("usePomodoroTimer", () => {
   });
 
   it("opens the all tasks complete modal instead of the single task complete modal when no pending tasks remain", () => {
-    useAchievementStore.getState().recordUnlocked([
-      "first-task",
-      "morning-focus",
-      "afternoon-restart",
-      "night-focus",
-      "weekend-focus",
-    ]);
+    useAchievementStore
+      .getState()
+      .recordUnlocked([
+        "first-task",
+        "morning-focus",
+        "afternoon-restart",
+        "night-focus",
+        "weekend-focus",
+      ]);
 
     const currentTask = useTaskStore.getState().createTask({
       title: "完成 PRD",
@@ -176,12 +175,9 @@ describe("usePomodoroTimer", () => {
 
   it("prioritizes achievement unlocked feedback over task completion flow when a new achievement is unlocked", () => {
     vi.setSystemTime(new Date("2026-05-13T08:00:00.000Z"));
-    useAchievementStore.getState().recordUnlocked([
-      "morning-focus",
-      "afternoon-restart",
-      "night-focus",
-      "weekend-focus",
-    ]);
+    useAchievementStore
+      .getState()
+      .recordUnlocked(["morning-focus", "afternoon-restart", "night-focus", "weekend-focus"]);
 
     const currentTask = useTaskStore.getState().createTask({
       title: "晨间任务",

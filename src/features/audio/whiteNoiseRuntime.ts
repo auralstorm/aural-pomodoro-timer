@@ -1,8 +1,6 @@
-import type { WhiteNoisePreset } from "@/types/settings";
+import type { ActiveWhiteNoisePreset } from "@/types/settings";
 
 import { useAudioRuntimeStore } from "./audioRuntimeStore";
-
-type ActiveWhiteNoisePreset = Exclude<WhiteNoisePreset, "off">;
 
 export function syncWhiteNoiseRuntime(
   isWhiteNoisePlaying: boolean,

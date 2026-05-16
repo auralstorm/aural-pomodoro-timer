@@ -30,7 +30,11 @@ export function BreakCompleteModal({
 
   return (
     <AppDialog
-      description={isLongBreak ? "这一轮恢复已经完成，回到下一轮专注节奏。" : "状态已经恢复，现在开始下一轮专注。"}
+      description={
+        isLongBreak
+          ? "这一轮恢复已经完成，回到下一轮专注节奏。"
+          : "状态已经恢复，现在开始下一轮专注。"
+      }
       onOpenChange={onOpenChange}
       open={open}
       size="md"

@@ -3,7 +3,14 @@
     "allow": [
       "Bash(npx tsc *)",
       "Bash(npx vitest *)",
-      "Bash(cargo check *)"
+      "Bash(cargo check *)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm format *)",
+      "Bash(pnpm lint:fix)",
+      "Bash(pnpm lint *)",
+      "Bash(grep -v \"^$\")",
+      "Bash(grep -o '[a-z/-]*$')",
+      "Bash(python *)"
     ]
   }
 }

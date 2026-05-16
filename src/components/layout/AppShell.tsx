@@ -42,7 +42,6 @@ export function AppShell() {
 
   return (
     <div className="relative min-h-dvh overflow-x-clip bg-background text-foreground">
-      {/* <GlobalDecorLayer /> */}
       <div className="relative z-10">
         <AppHeader />
         <div className="pt-[calc(var(--header-height))]">

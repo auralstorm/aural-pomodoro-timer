@@ -28,23 +28,13 @@ export const useSettingsStore = create<SettingsStore>()(
 );
 
 function stripActions(state: SettingsStore): SettingsStateData {
-  const {
-    updateSettings: _updateSettings,
-    resetSettings: _resetSettings,
-    ...data
-  } = state;
+  const { updateSettings: _updateSettings, resetSettings: _resetSettings, ...data } = state;
   return data;
 }
 
 function migrateLegacySettings(persistedState: unknown): SettingsStateData {
-  if (
-    persistedState &&
-    typeof persistedState === "object" &&
-    "data" in persistedState
-  ) {
-    return normalizeLegacySettings(
-      (persistedState as { data: LegacySettingsData }).data,
-    );
+  if (persistedState && typeof persistedState === "object" && "data" in persistedState) {
+    return normalizeLegacySettings((persistedState as { data: LegacySettingsData }).data);
   }
 
   return normalizeLegacySettings(persistedState as LegacySettingsData);
@@ -53,10 +43,7 @@ function migrateLegacySettings(persistedState: unknown): SettingsStateData {
 type LegacyReminderTonePreset = ReminderTonePreset | "bell" | "woodfish" | "clear";
 type LegacyWhiteNoisePreset = WhiteNoisePreset | "cafe" | "waves";
 type LegacySettingsData = Partial<
-  Omit<
-    SettingsStateData,
-    "reminderTonePreset" | "whiteNoisePreset"
-  >
+  Omit<SettingsStateData, "reminderTonePreset" | "whiteNoisePreset">
 > & {
   notificationEnabled?: boolean;
   reminderTonePreset?: LegacyReminderTonePreset;
@@ -94,10 +81,7 @@ export function normalizeLegacySettings(data: LegacySettingsData): SettingsState
       legacyNotificationEnabled ??
       DEFAULT_SETTINGS.desktopNotificationEnabled,
     reminderTonePreset: normalizeReminderTonePreset(settings.reminderTonePreset),
-    whiteNoisePreset: normalizeWhiteNoisePreset(
-      settings.whiteNoisePreset,
-      whiteNoiseEnabled,
-    ),
+    whiteNoisePreset: normalizeWhiteNoisePreset(settings.whiteNoisePreset, whiteNoiseEnabled),
   };
 }
 

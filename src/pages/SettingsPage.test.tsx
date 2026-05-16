@@ -54,7 +54,10 @@ describe("SettingsPage", () => {
     expect(useSettingsStore.getState().focusMinutes).toBe(16);
     expect(useSettingsStore.getState().pomodoroPreset).toBe("custom");
 
-    expect(screen.getByRole("button", { name: /轻量模式/i })).toHaveAttribute("aria-pressed", "false");
+    expect(screen.getByRole("button", { name: /轻量模式/i })).toHaveAttribute(
+      "aria-pressed",
+      "false",
+    );
     expect(screen.getByRole("button", { name: /自定义/i })).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByText("15 / 3")).toBeInTheDocument();
   });

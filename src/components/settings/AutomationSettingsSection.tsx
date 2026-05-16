@@ -9,7 +9,12 @@ type AutomationSettingsSectionProps = {
   assistantEnabled: boolean;
   minimizeToTray: boolean;
   onChange: (
-    key: "autoStartNextRound" | "autoStartBreak" | "alwaysOnTop" | "assistantEnabled" | "minimizeToTray",
+    key:
+      | "autoStartNextRound"
+      | "autoStartBreak"
+      | "alwaysOnTop"
+      | "assistantEnabled"
+      | "minimizeToTray",
     checked: boolean,
   ) => void;
 };

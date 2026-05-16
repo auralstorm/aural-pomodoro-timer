@@ -7,7 +7,4 @@ import * as PIXI from "pixi.js";
 
 window.PIXI = PIXI;
 
-
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-    <App />
-);
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(<App />);

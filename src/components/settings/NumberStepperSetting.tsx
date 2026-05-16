@@ -49,15 +49,12 @@ export function NumberStepperSetting({
       role="group"
     >
       <span className="inline-flex items-center gap-2 text-sm font-semibold">
-        {icon ? <img alt="" className="size-5 object-contain" draggable={false} src={icon} /> : null}
+        {icon ? (
+          <img alt="" className="size-5 object-contain" draggable={false} src={icon} />
+        ) : null}
         {label}
       </span>
-      <div
-        className={cn(
-          "flex items-center gap-2",
-          compact ? "justify-start" : "justify-end",
-        )}
-      >
+      <div className={cn("flex items-center gap-2", compact ? "justify-start" : "justify-end")}>
         <InputGroup className={cn("bg-card", compact ? "h-12 w-[140px]" : "h-8 w-[112px]")}>
           <InputGroupAddon align="inline-start">
             <InputGroupButton
@@ -91,7 +88,9 @@ export function NumberStepperSetting({
           </InputGroupAddon>
         </InputGroup>
         {suffix ? (
-          <InputGroupText className={cn(compact ? "min-w-0 text-sm" : "min-w-14 justify-end text-xs")}>
+          <InputGroupText
+            className={cn(compact ? "min-w-0 text-sm" : "min-w-14 justify-end text-xs")}
+          >
             {suffix}
           </InputGroupText>
         ) : null}
