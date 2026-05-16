@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(410)">
+      <stop stop-color="#EDF6EA"/>
+      <stop offset="1" stop-color="#E6F0E2"/>
+    </radialGradient>
+    <linearGradient id="green" x1="310" y1="300" x2="720" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7BD36A"/>
+      <stop offset="1" stop-color="#4CC652"/>
+    </linearGradient>
+    <filter id="soft" x="180" y="180" width="664" height="664" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#B8D7B5" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <g filter="url(#soft)">
+    <rect x="328" y="344" width="368" height="332" rx="52" fill="#FCFCFA" stroke="url(#green)" stroke-width="28"/>
+    <rect x="420" y="286" width="184" height="84" rx="26" fill="url(#green)"/>
+    <path d="M470 290c0-16 12-28 28-28h28c16 0 28 12 28 28v10h-84v-10z" fill="#FCFCFA"/>
+    <path d="M432 530l78 78 126-126" stroke="url(#green)" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="512" cy="328" r="14" fill="#FCFCFA"/>
+  </g>
+</svg>

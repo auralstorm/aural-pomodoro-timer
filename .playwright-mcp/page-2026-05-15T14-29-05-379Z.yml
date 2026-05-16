@@ -1,0 +1,23 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner:
+      - navigation "主导航" [ref=e5]:
+        - link "专注 专注" [ref=e7] [cursor=pointer]:
+          - /url: "#/focus"
+          - img "专注" [ref=e8]
+          - generic [ref=e9]: 专注
+        - link "任务 任务" [ref=e10] [cursor=pointer]:
+          - /url: "#/tasks"
+          - img "任务" [ref=e11]
+          - generic [ref=e12]: 任务
+        - link "统计 统计" [ref=e13] [cursor=pointer]:
+          - /url: "#/statistics"
+          - img "统计" [ref=e14]
+          - generic [ref=e15]: 统计
+        - link "设置 设置" [ref=e16] [cursor=pointer]:
+          - /url: "#/settings"
+          - img "设置" [ref=e17]
+          - generic [ref=e18]: 设置
+    - main [ref=e21]:
+      - generic [ref=e22]: 番茄小助手正在准备页面...
+  - region "Notifications alt+T"

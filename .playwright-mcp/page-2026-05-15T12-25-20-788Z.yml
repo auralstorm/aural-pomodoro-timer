@@ -1,0 +1,162 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner:
+      - navigation "主导航" [ref=e5]:
+        - link "专注 专注" [ref=e7] [cursor=pointer]:
+          - /url: "#/focus"
+          - img "专注" [ref=e8]
+          - generic [ref=e9]: 专注
+        - link "任务 任务" [ref=e10] [cursor=pointer]:
+          - /url: "#/tasks"
+          - img "任务" [ref=e11]
+          - generic [ref=e12]: 任务
+        - link "统计 统计" [ref=e13] [cursor=pointer]:
+          - /url: "#/statistics"
+          - img "统计" [ref=e14]
+          - generic [ref=e15]: 统计
+        - link "设置 设置" [ref=e16] [cursor=pointer]:
+          - /url: "#/settings"
+          - img "设置" [ref=e17]
+          - generic [ref=e18]: 设置
+    - main [ref=e21]:
+      - generic [ref=e23]:
+        - generic [ref=e25]:
+          - heading "3213123" [level=2] [ref=e28]
+          - generic [ref=e29]:
+            - img [ref=e30]
+            - generic [ref=e34]:
+              - generic [ref=e35]: 短休息中
+              - generic [ref=e36]:
+                - generic [ref=e38]: "0"
+                - generic [ref=e40]: "5"
+                - generic [ref=e41]: ":"
+                - generic [ref=e43]: "0"
+                - generic [ref=e45]: "0"
+              - generic [ref=e46]: 番茄时间更有价值
+          - generic [ref=e47]:
+            - button "专注 25min" [ref=e49] [cursor=pointer]:
+              - text: 专注
+              - generic [ref=e50]: 25min
+            - button "短休息 5min" [pressed] [ref=e51] [cursor=pointer]:
+              - text: 短休息
+              - generic [ref=e52]: 5min
+            - button "长休息 15min" [ref=e53] [cursor=pointer]:
+              - text: 长休息
+              - generic [ref=e54]: 15min
+          - generic [ref=e55]:
+            - button "开始专注" [ref=e56] [cursor=pointer]:
+              - img [ref=e57]
+              - text: 开始专注
+            - button "重置" [ref=e59] [cursor=pointer]:
+              - img [ref=e60]
+              - text: 重置
+            - button "跳过本轮" [ref=e63] [cursor=pointer]:
+              - img [ref=e64]
+              - text: 跳过本轮
+        - complementary [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]:
+                - heading "今日任务 今日任务" [level=2] [ref=e70]:
+                  - img "今日任务" [ref=e71]
+                  - text: 今日任务
+                - paragraph [ref=e72]: 已完成 2 / 7
+              - button "添加任务" [ref=e73] [cursor=pointer]:
+                - img [ref=e74]
+                - text: 添加任务
+            - generic [ref=e76]:
+              - article "33333" [ref=e77] [cursor=pointer]:
+                - button "完成任务" [ref=e78]
+                - generic [ref=e80]:
+                  - heading "33333" [level=3] [ref=e81]:
+                    - generic [ref=e82]: "33333"
+                  - generic [ref=e84]:
+                    - text: 0/2 个
+                    - img "番茄" [ref=e85]
+                - generic [ref=e86]:
+                  - button "开始专注：33333" [ref=e87]:
+                    - img [ref=e88]
+                  - button "更多操作" [ref=e90]:
+                    - img [ref=e91]
+              - article "12321" [ref=e95] [cursor=pointer]:
+                - button "完成任务" [ref=e96]
+                - generic [ref=e98]:
+                  - heading "12321" [level=3] [ref=e99]:
+                    - generic [ref=e100]: "12321"
+                  - generic [ref=e102]:
+                    - text: 0/2 个
+                    - img "番茄" [ref=e103]
+                - generic [ref=e104]:
+                  - button "开始专注：12321" [ref=e105]:
+                    - img [ref=e106]
+                  - button "更多操作" [ref=e108]:
+                    - img [ref=e109]
+              - article "3213123" [ref=e113] [cursor=pointer]:
+                - button "完成任务" [ref=e114]
+                - generic [ref=e116]:
+                  - heading "3213123" [level=3] [ref=e117]:
+                    - generic [ref=e118]: "3213123"
+                  - generic [ref=e120]:
+                    - text: 0/2 个
+                    - img "番茄" [ref=e121]
+                - generic [ref=e122]:
+                  - generic [ref=e123]: 当前任务
+                  - button "开始当前任务：3213123" [ref=e124]:
+                    - img [ref=e125]
+                  - button "更多操作" [ref=e127]:
+                    - img [ref=e128]
+              - article "123123" [ref=e132] [cursor=pointer]:
+                - button "完成任务" [ref=e133]
+                - generic [ref=e135]:
+                  - heading "123123" [level=3] [ref=e136]:
+                    - generic [ref=e137]: "123123"
+                  - generic [ref=e139]:
+                    - text: 0/2 个
+                    - img "番茄" [ref=e140]
+                - generic [ref=e141]:
+                  - button "开始专注：123123" [ref=e142]:
+                    - img [ref=e143]
+                  - button "更多操作" [ref=e145]:
+                    - img [ref=e146]
+            - link "查看全部任务" [ref=e152] [cursor=pointer]:
+              - /url: "#/tasks"
+              - text: 查看全部任务
+              - img [ref=e153]
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - heading "专注工具 专注工具" [level=2] [ref=e157]:
+                - img "专注工具" [ref=e158]
+                - text: 专注工具
+              - link "打开专注工具设置" [ref=e159] [cursor=pointer]:
+                - /url: "#/settings"
+                - img [ref=e160]
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - img [ref=e166]
+                - generic [ref=e169]:
+                  - generic [ref=e170]: 白噪音
+                  - button "选择白噪音" [ref=e171] [cursor=pointer]:
+                    - generic [ref=e172]: 溪流
+                    - img [ref=e173]
+                - button "切换白噪音" [ref=e175] [cursor=pointer]
+              - generic [ref=e178]:
+                - img [ref=e180]
+                - generic [ref=e183]:
+                  - generic [ref=e184]: 提醒音
+                  - button "选择提醒音" [ref=e185] [cursor=pointer]:
+                    - generic [ref=e186]: 轻柔提示音
+                    - img [ref=e187]
+                - button "切换提醒音" [ref=e189] [cursor=pointer]
+              - button "自动开始下一轮 休息结束自动开始 切换自动开始下一轮" [ref=e192] [cursor=pointer]:
+                - img [ref=e194]
+                - generic [ref=e199]:
+                  - generic [ref=e200]: 自动开始下一轮
+                  - generic [ref=e201]: 休息结束自动开始
+                - generic [ref=e204]: 切换自动开始下一轮
+              - button "窗口置顶 保持在最前 切换窗口置顶" [ref=e205] [cursor=pointer]:
+                - img [ref=e207]
+                - generic [ref=e212]:
+                  - generic [ref=e213]: 窗口置顶
+                  - generic [ref=e214]: 保持在最前
+                - generic [ref=e217]: 切换窗口置顶
+  - region "Notifications alt+T"

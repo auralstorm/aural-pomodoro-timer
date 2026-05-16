@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(420)">
+      <stop stop-color="#F8ECE8"/>
+      <stop offset="1" stop-color="#F6E6E1"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="250" y1="250" x2="774" y2="774" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7B73"/>
+      <stop offset="1" stop-color="#FF4F4F"/>
+    </linearGradient>
+    <linearGradient id="hand" x1="482" y1="392" x2="654" y2="608" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF837B"/>
+      <stop offset="1" stop-color="#FF5B55"/>
+    </linearGradient>
+    <filter id="soft" x="120" y="120" width="784" height="784" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#E7C7C0" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <g filter="url(#soft)">
+    <circle cx="512" cy="512" r="252" stroke="url(#ring)" stroke-width="54" stroke-linecap="round"/>
+    <line x1="512" y1="486" x2="512" y2="340" stroke="url(#hand)" stroke-width="48" stroke-linecap="round"/>
+    <line x1="512" y1="512" x2="642" y2="588" stroke="url(#hand)" stroke-width="48" stroke-linecap="round"/>
+    <circle cx="512" cy="512" r="42" fill="url(#hand)"/>
+    <ellipse cx="430" cy="320" rx="42" ry="20" transform="rotate(-24 430 320)" fill="#FFD8CF" opacity="0.8"/>
+  </g>
+</svg>

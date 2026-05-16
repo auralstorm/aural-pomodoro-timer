@@ -1,0 +1,63 @@
+- generic [ref=e3]:
+  - banner:
+    - navigation "主导航" [ref=e4]:
+      - link "专注" [active] [ref=e6] [cursor=pointer]:
+        - /url: "#/focus"
+        - img [ref=e7]
+        - generic [ref=e10]: 专注
+      - link "任务" [ref=e11] [cursor=pointer]:
+        - /url: "#/tasks"
+        - img [ref=e12]
+        - generic [ref=e15]: 任务
+      - link "统计" [ref=e16] [cursor=pointer]:
+        - /url: "#/statistics"
+        - img [ref=e17]
+        - generic [ref=e19]: 统计
+      - link "设置" [ref=e20] [cursor=pointer]:
+        - /url: "#/settings"
+        - img [ref=e21]
+        - generic [ref=e24]: 设置
+  - main [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e29]:
+        - heading "今日任务" [level=1] [ref=e30]
+        - paragraph [ref=e31]: 把任务拆小，一颗番茄一个目标
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - button "全部" [ref=e37] [cursor=pointer]
+              - button "今日" [pressed] [ref=e38] [cursor=pointer]
+              - button "进行中" [ref=e39] [cursor=pointer]
+              - button "已完成" [ref=e40] [cursor=pointer]
+              - button "高优先级" [ref=e41] [cursor=pointer]
+            - generic [ref=e42]:
+              - button "筛选" [ref=e43] [cursor=pointer]:
+                - img [ref=e44]
+                - text: 筛选
+              - button "新建任务" [ref=e46] [cursor=pointer]:
+                - img [ref=e47]
+                - text: 新建任务
+          - generic [ref=e49]:
+            - heading "暂无任务" [level=3] [ref=e50]
+            - paragraph [ref=e51]: 先添加一个能在 1-3 个番茄内推进的小目标。
+        - complementary [ref=e52]:
+          - generic [ref=e53]:
+            - heading "任务概览" [level=2] [ref=e54]
+            - generic [ref=e55]:
+              - generic [ref=e56]:
+                - generic [ref=e57]: 今日任务完成率
+                - strong [ref=e58]: 0%
+              - generic [ref=e59]:
+                - generic [ref=e60]: 今日预计番茄数
+                - strong [ref=e61]: 0 个
+              - generic [ref=e62]:
+                - generic [ref=e63]: 已完成番茄数
+                - strong [ref=e64]: 0 个
+              - generic [ref=e65]:
+                - generic [ref=e66]: 剩余任务数
+                - strong [ref=e67]: 0 个
+          - generic [ref=e69]:
+            - heading "把今天的小目标安排好吧" [level=2] [ref=e70]
+            - paragraph [ref=e71]: 完成一颗番茄，就靠近目标一点。
+  - region "Notifications alt+T"

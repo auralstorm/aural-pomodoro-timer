@@ -1,0 +1,54 @@
+:root {
+  /* Brand */
+  --color-tomato-red: #FF6B6B;
+  --color-tomato-deep: #F25555;
+  --color-tomato-light: #FFE1DD;
+  --color-tomato-soft: #FFF0EE;
+
+  /* Accent */
+  --color-cream-orange: #FFD6A5;
+  --color-warm-yellow: #FFE89A;
+  --color-mint-green: #BEECC4;
+  --color-sky-blue: #BFE9FF;
+  --color-lavender: #DCCBFF;
+
+  /* Neutral */
+  --color-page-bg: #FFF8F3;
+  --color-card-bg: #FFFFFF;
+  --color-border: #F1E4DC;
+  --color-divider: #F6EDE8;
+
+  /* Text */
+  --color-text-primary: #3A2E2A;
+  --color-text-secondary: #7B6F6A;
+  --color-text-tertiary: #A99C96;
+  --color-text-inverse: #FFFFFF;
+
+  /* Status */
+  --color-success: #6BCB77;
+  --color-warning: #FFB84C;
+  --color-danger: #FF7A7A;
+  --color-info: #7EC8E3;
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+  --radius-modal: 32px;
+  --radius-pill: 999px;
+
+  /* Shadow */
+  --shadow-card: 0 8px 24px rgba(58, 46, 42, 0.06);
+  --shadow-card-hover: 0 12px 32px rgba(58, 46, 42, 0.10);
+  --shadow-button: 0 6px 16px rgba(255, 107, 107, 0.25);
+  --shadow-modal: 0 20px 60px rgba(58, 46, 42, 0.16);
+
+  /* Layout */
+  --layout-max-width: 1600px;
+  --header-height: 72px;
+  --page-padding-x: 48px;
+  --page-padding-y: 32px;
+  --card-gap: 24px;
+}

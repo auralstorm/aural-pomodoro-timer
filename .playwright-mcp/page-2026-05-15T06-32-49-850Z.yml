@@ -1,0 +1,106 @@
+- generic [ref=e3]:
+  - banner:
+    - navigation "主导航" [ref=e4]:
+      - link "专注 专注" [active] [ref=e6] [cursor=pointer]:
+        - /url: "#/focus"
+        - img "专注" [ref=e7]
+        - generic [ref=e8]: 专注
+      - link "任务 任务" [ref=e9] [cursor=pointer]:
+        - /url: "#/tasks"
+        - img "任务" [ref=e10]
+        - generic [ref=e11]: 任务
+      - link "统计 统计" [ref=e12] [cursor=pointer]:
+        - /url: "#/statistics"
+        - img "统计" [ref=e13]
+        - generic [ref=e14]: 统计
+      - link "设置 设置" [ref=e15] [cursor=pointer]:
+        - /url: "#/settings"
+        - img "设置" [ref=e16]
+        - generic [ref=e17]: 设置
+  - main [ref=e465]:
+    - generic [ref=e467]:
+      - generic [ref=e469]:
+        - heading "准备开始" [level=2] [ref=e472]
+        - generic [ref=e473]:
+          - img [ref=e474]
+          - generic [ref=e478]:
+            - generic [ref=e479]: 专注中
+            - generic [ref=e480]:
+              - generic [ref=e482]: "2"
+              - generic [ref=e484]: "5"
+              - generic [ref=e485]: ":"
+              - generic [ref=e487]: "0"
+              - generic [ref=e489]: "0"
+            - generic [ref=e490]: 番茄时间更有价值
+        - generic [ref=e491]:
+          - button "专注 25min" [pressed] [ref=e493] [cursor=pointer]:
+            - text: 专注
+            - generic [ref=e494]: 25min
+          - button "短休息 5min" [ref=e495] [cursor=pointer]:
+            - text: 短休息
+            - generic [ref=e496]: 5min
+          - button "长休息 15min" [ref=e497] [cursor=pointer]:
+            - text: 长休息
+            - generic [ref=e498]: 15min
+        - generic [ref=e499]:
+          - button "开始专注" [ref=e500] [cursor=pointer]:
+            - img [ref=e501]
+            - text: 开始专注
+          - button "重置" [ref=e503] [cursor=pointer]:
+            - img [ref=e504]
+            - text: 重置
+          - button "跳过本轮" [ref=e507] [cursor=pointer]:
+            - img [ref=e508]
+            - text: 跳过本轮
+      - complementary [ref=e510]:
+        - generic [ref=e511]:
+          - generic [ref=e512]:
+            - generic [ref=e513]:
+              - heading "今日任务 今日任务" [level=2] [ref=e514]:
+                - img "今日任务" [ref=e515]
+                - text: 今日任务
+              - paragraph [ref=e516]: 已完成 2 / 2
+            - button "添加任务" [ref=e517] [cursor=pointer]:
+              - img [ref=e518]
+              - text: 添加任务
+          - generic [ref=e522]:
+            - heading "今天先安排一件最重要的事" [level=3] [ref=e523]
+            - paragraph [ref=e524]: 先安排今天最重要的一件事，再开始一轮更稳。
+        - generic [ref=e526]:
+          - generic [ref=e527]:
+            - heading "专注工具 专注工具" [level=2] [ref=e528]:
+              - img "专注工具" [ref=e529]
+              - text: 专注工具
+            - link "打开专注工具设置" [ref=e530] [cursor=pointer]:
+              - /url: "#/settings"
+              - img [ref=e531]
+          - generic [ref=e534]:
+            - generic [ref=e535]:
+              - img [ref=e537]
+              - generic [ref=e540]:
+                - generic [ref=e541]: 白噪音
+                - button "选择白噪音" [ref=e542] [cursor=pointer]:
+                  - generic [ref=e543]: 溪流
+                  - img [ref=e544]
+              - button "切换白噪音" [ref=e546] [cursor=pointer]
+            - generic [ref=e549]:
+              - img [ref=e551]
+              - generic [ref=e554]:
+                - generic [ref=e555]: 提醒音
+                - button "选择提醒音" [ref=e556] [cursor=pointer]:
+                  - generic [ref=e557]: 轻柔提示音
+                  - img [ref=e558]
+              - button "切换提醒音" [ref=e560] [cursor=pointer]
+            - button "自动开始下一轮 休息结束自动开始 切换自动开始下一轮" [ref=e563] [cursor=pointer]:
+              - img [ref=e565]
+              - generic [ref=e570]:
+                - generic [ref=e571]: 自动开始下一轮
+                - generic [ref=e572]: 休息结束自动开始
+              - generic [ref=e575]: 切换自动开始下一轮
+            - button "窗口置顶 保持在最前 切换窗口置顶" [ref=e576] [cursor=pointer]:
+              - img [ref=e578]
+              - generic [ref=e583]:
+                - generic [ref=e584]: 窗口置顶
+                - generic [ref=e585]: 保持在最前
+              - generic [ref=e588]: 切换窗口置顶
+  - region "Notifications alt+T"

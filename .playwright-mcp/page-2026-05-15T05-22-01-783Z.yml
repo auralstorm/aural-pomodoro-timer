@@ -1,0 +1,87 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner:
+      - navigation "主导航" [ref=e4]:
+        - link "专注 专注" [ref=e6] [cursor=pointer]:
+          - /url: "#/focus"
+          - img "专注" [ref=e7]
+          - generic [ref=e8]: 专注
+        - link "任务 任务" [active] [ref=e9] [cursor=pointer]:
+          - /url: "#/tasks"
+          - img "任务" [ref=e10]
+          - generic [ref=e11]: 任务
+        - link "统计 统计" [ref=e12] [cursor=pointer]:
+          - /url: "#/statistics"
+          - img "统计" [ref=e13]
+          - generic [ref=e14]: 统计
+        - link "设置 设置" [ref=e15] [cursor=pointer]:
+          - /url: "#/settings"
+          - img "设置" [ref=e16]
+          - generic [ref=e17]: 设置
+    - main [ref=e542]:
+      - generic [ref=e543]:
+        - generic [ref=e545]:
+          - heading "今日任务" [level=1] [ref=e546]
+          - paragraph [ref=e547]: 把任务拆小，一颗番茄一个目标
+        - generic [ref=e548]:
+          - generic [ref=e549]:
+            - generic [ref=e550]:
+              - generic [ref=e551]:
+                - button "全部" [ref=e553] [cursor=pointer]
+                - button "今日" [pressed] [ref=e554] [cursor=pointer]
+                - button "进行中" [ref=e555] [cursor=pointer]
+                - button "已完成" [ref=e556] [cursor=pointer]
+                - button "高优先级" [ref=e557] [cursor=pointer]
+              - button "新建任务" [ref=e559] [cursor=pointer]:
+                - img [ref=e560]
+                - text: 新建任务
+            - generic [ref=e562]:
+              - article [ref=e563]:
+                - button "任务已完成" [disabled] [ref=e564]:
+                  - img [ref=e565]
+                - generic [ref=e568]:
+                  - heading "已完成任务残留绑定" [level=3] [ref=e569]
+                  - generic [ref=e570]: 重要
+                - generic [ref=e571]:
+                  - generic [ref=e572]: 🍅 2 / 2
+                  - button "编辑任务：已完成任务残留绑定" [ref=e573] [cursor=pointer]:
+                    - img [ref=e574]
+                  - button "删除任务：已完成任务残留绑定" [ref=e576] [cursor=pointer]:
+                    - img [ref=e577]
+              - article [ref=e580]:
+                - button "任务已完成" [disabled] [ref=e581]:
+                  - img [ref=e582]
+                - generic [ref=e585]:
+                  - heading "待处理的新任务" [level=3] [ref=e586]
+                  - generic [ref=e587]: 普通
+                - generic [ref=e588]:
+                  - generic [ref=e589]: 🍅 0 / 1
+                  - button "编辑任务：待处理的新任务" [ref=e590] [cursor=pointer]:
+                    - img [ref=e591]
+                  - button "删除任务：待处理的新任务" [ref=e593] [cursor=pointer]:
+                    - img [ref=e594]
+          - complementary [ref=e597]:
+            - generic [ref=e598]:
+              - heading "任务概览" [level=3] [ref=e601]
+              - generic [ref=e602]:
+                - generic [ref=e604]:
+                  - generic [ref=e605]:
+                    - img [ref=e606]
+                    - generic [ref=e611]: 100%
+                  - generic [ref=e612]:
+                    - heading "今日任务完成率" [level=3] [ref=e614]
+                    - paragraph [ref=e617]: 2 / 2 个任务已完成
+                - generic [ref=e621]:
+                  - heading "今日预计番茄数" [level=3] [ref=e623]
+                  - generic [ref=e624]: 3 个
+                  - paragraph [ref=e625]: 预计专注时间 1 小时 15 分钟
+                - generic [ref=e629]:
+                  - heading "已完成番茄数" [level=3] [ref=e631]
+                  - generic [ref=e632]: 7 个
+                  - paragraph [ref=e633]: 专注时长 4 小时
+                - generic [ref=e637]:
+                  - heading "剩余任务数" [level=3] [ref=e639]
+                  - generic [ref=e640]: 0 个
+                  - paragraph [ref=e641]: 继续加油，完成更多小目标！
+    - region "Notifications alt+T"
+  - generic [ref=e217]: "0"

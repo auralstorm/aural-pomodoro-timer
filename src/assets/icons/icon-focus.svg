@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="focusGrad" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0%" stop-color="#FF8A7A"/>
+      <stop offset="100%" stop-color="#FF5A4F"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="32" cy="32" r="22" fill="#FFF5F2" stroke="url(#focusGrad)" stroke-width="4"/>
+  <circle cx="32" cy="32" r="12" fill="#FFFFFF" stroke="#FF6B5E" stroke-width="3"/>
+  <circle cx="32" cy="32" r="4" fill="#FF6B5E"/>
+
+  <path d="M26 10C28 6 36 6 38 10" stroke="#5FBF68" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="24" cy="10" rx="5" ry="3" transform="rotate(-20 24 10)" fill="#7ED37F"/>
+  <ellipse cx="40" cy="10" rx="5" ry="3" transform="rotate(20 40 10)" fill="#7ED37F"/>
+</svg>

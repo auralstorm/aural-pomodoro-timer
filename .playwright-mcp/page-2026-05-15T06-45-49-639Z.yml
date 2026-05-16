@@ -1,0 +1,240 @@
+- generic [ref=e3]:
+  - banner:
+    - navigation "主导航" [ref=e4]:
+      - link "专注 专注" [ref=e6] [cursor=pointer]:
+        - /url: "#/focus"
+        - img "专注" [ref=e7]
+        - generic [ref=e8]: 专注
+      - link "任务 任务" [ref=e9] [cursor=pointer]:
+        - /url: "#/tasks"
+        - img "任务" [ref=e10]
+        - generic [ref=e11]: 任务
+      - link "统计 统计" [ref=e12] [cursor=pointer]:
+        - /url: "#/statistics"
+        - img "统计" [ref=e13]
+        - generic [ref=e14]: 统计
+      - link "设置 设置" [ref=e15] [cursor=pointer]:
+        - /url: "#/settings"
+        - img "设置" [ref=e16]
+        - generic [ref=e17]: 设置
+  - main [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e23]:
+        - heading "今日任务" [level=1] [ref=e24]
+        - paragraph [ref=e25]: 把任务拆小，一颗番茄一个目标
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - button "全部" [ref=e31] [cursor=pointer]
+              - button "今日" [pressed] [ref=e32] [cursor=pointer]
+              - button "进行中" [ref=e33] [cursor=pointer]
+              - button "已完成" [ref=e34] [cursor=pointer]
+              - button "高优先级" [ref=e35] [cursor=pointer]
+            - button "新建任务" [ref=e37] [cursor=pointer]:
+              - img [ref=e38]
+              - text: 新建任务
+          - generic [ref=e41]:
+            - article [ref=e42]:
+              - button "完成任务" [ref=e43] [cursor=pointer]
+              - generic [ref=e45]:
+                - heading "3213123" [level=3] [ref=e46]
+                - generic [ref=e47]: 普通
+              - generic [ref=e48]:
+                - generic [ref=e49]: 🍅 0 / 2
+                - button "开始专注：3213123" [ref=e50] [cursor=pointer]:
+                  - img [ref=e51]
+                  - text: 开始专注
+                - button "编辑任务：3213123" [ref=e53] [cursor=pointer]:
+                  - img [ref=e54]
+                - button "删除任务：3213123" [ref=e56] [cursor=pointer]:
+                  - img [ref=e57]
+            - article [ref=e60]:
+              - button "完成任务" [ref=e61] [cursor=pointer]
+              - generic [ref=e63]:
+                - heading "123123" [level=3] [ref=e64]
+                - generic [ref=e65]: 普通
+              - generic [ref=e66]:
+                - generic [ref=e67]: 🍅 0 / 2
+                - button "开始专注：123123" [ref=e68] [cursor=pointer]:
+                  - img [ref=e69]
+                  - text: 开始专注
+                - button "编辑任务：123123" [ref=e71] [cursor=pointer]:
+                  - img [ref=e72]
+                - button "删除任务：123123" [ref=e74] [cursor=pointer]:
+                  - img [ref=e75]
+            - article [ref=e78]:
+              - button "完成任务" [ref=e79] [cursor=pointer]
+              - generic [ref=e81]:
+                - heading "321312" [level=3] [ref=e82]
+                - generic [ref=e83]: 普通
+              - generic [ref=e84]:
+                - generic [ref=e85]: 🍅 0 / 2
+                - button "开始专注：321312" [ref=e86] [cursor=pointer]:
+                  - img [ref=e87]
+                  - text: 开始专注
+                - button "编辑任务：321312" [ref=e89] [cursor=pointer]:
+                  - img [ref=e90]
+                - button "删除任务：321312" [ref=e92] [cursor=pointer]:
+                  - img [ref=e93]
+            - article [ref=e96]:
+              - button "任务已完成" [disabled] [ref=e97]:
+                - img [ref=e98]
+              - generic [ref=e101]:
+                - heading "已完成任务残留绑定" [level=3] [ref=e102]
+                - generic [ref=e103]: 重要
+              - generic [ref=e104]:
+                - generic [ref=e105]: 🍅 2 / 2
+                - button "编辑任务：已完成任务残留绑定" [ref=e106] [cursor=pointer]:
+                  - img [ref=e107]
+                - button "删除任务：已完成任务残留绑定" [ref=e109] [cursor=pointer]:
+                  - img [ref=e110]
+            - article [ref=e113]:
+              - button "任务已完成" [disabled] [ref=e114]:
+                - img [ref=e115]
+              - generic [ref=e118]:
+                - heading "待处理的新任务" [level=3] [ref=e119]
+                - generic [ref=e120]: 普通
+              - generic [ref=e121]:
+                - generic [ref=e122]: 🍅 0 / 1
+                - button "编辑任务：待处理的新任务" [ref=e123] [cursor=pointer]:
+                  - img [ref=e124]
+                - button "删除任务：待处理的新任务" [ref=e126] [cursor=pointer]:
+                  - img [ref=e127]
+        - complementary [ref=e130]:
+          - generic [ref=e131]:
+            - heading "任务概览" [level=3] [ref=e134]
+            - generic [ref=e135]:
+              - generic [ref=e137]:
+                - generic [ref=e138]:
+                  - img [ref=e139]
+                  - generic [ref=e144]:
+                    - generic "40" [ref=e145]:
+                      - generic [ref=e147]:
+                        - generic [ref=e148]: "0"
+                        - generic [ref=e149]: "1"
+                        - generic [ref=e150]: "2"
+                        - generic [ref=e151]: "3"
+                        - generic [ref=e152]: "4"
+                        - generic [ref=e153]: "5"
+                        - generic [ref=e154]: "6"
+                        - generic [ref=e155]: "7"
+                        - generic [ref=e156]: "8"
+                        - generic [ref=e157]: "9"
+                        - generic [ref=e158]: "0"
+                        - generic [ref=e159]: "1"
+                        - generic [ref=e160]: "2"
+                        - generic [ref=e161]: "3"
+                        - generic [ref=e162]: "4"
+                        - generic [ref=e163]: "5"
+                        - generic [ref=e164]: "6"
+                        - generic [ref=e165]: "7"
+                        - generic [ref=e166]: "8"
+                        - generic [ref=e167]: "9"
+                      - generic [ref=e169]:
+                        - generic [ref=e170]: "0"
+                        - generic [ref=e171]: "1"
+                        - generic [ref=e172]: "2"
+                        - generic [ref=e173]: "3"
+                        - generic [ref=e174]: "4"
+                        - generic [ref=e175]: "5"
+                        - generic [ref=e176]: "6"
+                        - generic [ref=e177]: "7"
+                        - generic [ref=e178]: "8"
+                        - generic [ref=e179]: "9"
+                        - generic [ref=e180]: "0"
+                        - generic [ref=e181]: "1"
+                        - generic [ref=e182]: "2"
+                        - generic [ref=e183]: "3"
+                        - generic [ref=e184]: "4"
+                        - generic [ref=e185]: "5"
+                        - generic [ref=e186]: "6"
+                        - generic [ref=e187]: "7"
+                        - generic [ref=e188]: "8"
+                        - generic [ref=e189]: "9"
+                    - generic [ref=e190]: "%"
+                - generic [ref=e191]:
+                  - heading "今日任务完成率" [level=3] [ref=e193]
+                  - paragraph [ref=e196]: 2 / 5 个任务已完成
+              - generic [ref=e200]:
+                - heading "今日预计番茄数" [level=3] [ref=e202]
+                - generic [ref=e203]:
+                  - generic "9" [ref=e204]:
+                    - generic [ref=e206]:
+                      - generic [ref=e207]: "0"
+                      - generic [ref=e208]: "1"
+                      - generic [ref=e209]: "2"
+                      - generic [ref=e210]: "3"
+                      - generic [ref=e211]: "4"
+                      - generic [ref=e212]: "5"
+                      - generic [ref=e213]: "6"
+                      - generic [ref=e214]: "7"
+                      - generic [ref=e215]: "8"
+                      - generic [ref=e216]: "9"
+                      - generic [ref=e217]: "0"
+                      - generic [ref=e218]: "1"
+                      - generic [ref=e219]: "2"
+                      - generic [ref=e220]: "3"
+                      - generic [ref=e221]: "4"
+                      - generic [ref=e222]: "5"
+                      - generic [ref=e223]: "6"
+                      - generic [ref=e224]: "7"
+                      - generic [ref=e225]: "8"
+                      - generic [ref=e226]: "9"
+                  - generic [ref=e227]: 个
+                - paragraph [ref=e228]: 预计专注时间 3 小时 45 分钟
+              - generic [ref=e232]:
+                - heading "已完成番茄数" [level=3] [ref=e234]
+                - generic [ref=e235]:
+                  - generic "7" [ref=e236]:
+                    - generic [ref=e238]:
+                      - generic [ref=e239]: "0"
+                      - generic [ref=e240]: "1"
+                      - generic [ref=e241]: "2"
+                      - generic [ref=e242]: "3"
+                      - generic [ref=e243]: "4"
+                      - generic [ref=e244]: "5"
+                      - generic [ref=e245]: "6"
+                      - generic [ref=e246]: "7"
+                      - generic [ref=e247]: "8"
+                      - generic [ref=e248]: "9"
+                      - generic [ref=e249]: "0"
+                      - generic [ref=e250]: "1"
+                      - generic [ref=e251]: "2"
+                      - generic [ref=e252]: "3"
+                      - generic [ref=e253]: "4"
+                      - generic [ref=e254]: "5"
+                      - generic [ref=e255]: "6"
+                      - generic [ref=e256]: "7"
+                      - generic [ref=e257]: "8"
+                      - generic [ref=e258]: "9"
+                  - generic [ref=e259]: 个
+                - paragraph [ref=e260]: 专注时长 4 小时
+              - generic [ref=e264]:
+                - heading "剩余任务数" [level=3] [ref=e266]
+                - generic [ref=e267]:
+                  - generic "3" [ref=e268]:
+                    - generic [ref=e270]:
+                      - generic [ref=e271]: "0"
+                      - generic [ref=e272]: "1"
+                      - generic [ref=e273]: "2"
+                      - generic [ref=e274]: "3"
+                      - generic [ref=e275]: "4"
+                      - generic [ref=e276]: "5"
+                      - generic [ref=e277]: "6"
+                      - generic [ref=e278]: "7"
+                      - generic [ref=e279]: "8"
+                      - generic [ref=e280]: "9"
+                      - generic [ref=e281]: "0"
+                      - generic [ref=e282]: "1"
+                      - generic [ref=e283]: "2"
+                      - generic [ref=e284]: "3"
+                      - generic [ref=e285]: "4"
+                      - generic [ref=e286]: "5"
+                      - generic [ref=e287]: "6"
+                      - generic [ref=e288]: "7"
+                      - generic [ref=e289]: "8"
+                      - generic [ref=e290]: "9"
+                  - generic [ref=e291]: 个
+                - paragraph [ref=e292]: 继续加油，完成更多小目标！
+  - region "Notifications alt+T"

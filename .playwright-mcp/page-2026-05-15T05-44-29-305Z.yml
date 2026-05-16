@@ -1,0 +1,301 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner:
+      - navigation "主导航" [ref=e4]:
+        - link "专注 专注" [ref=e6] [cursor=pointer]:
+          - /url: "#/focus"
+          - img "专注" [ref=e7]
+          - generic [ref=e8]: 专注
+        - link "任务 任务" [ref=e9] [cursor=pointer]:
+          - /url: "#/tasks"
+          - img "任务" [ref=e10]
+          - generic [ref=e11]: 任务
+        - link "统计 统计" [active] [ref=e12] [cursor=pointer]:
+          - /url: "#/statistics"
+          - img "统计" [ref=e13]
+          - generic [ref=e14]: 统计
+        - link "设置 设置" [ref=e15] [cursor=pointer]:
+          - /url: "#/settings"
+          - img "设置" [ref=e16]
+          - generic [ref=e17]: 设置
+    - main [ref=e261]:
+      - generic [ref=e262]:
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - heading "专注统计" [level=1] [ref=e265]
+            - paragraph [ref=e266]: 每一颗番茄，都是成长的记录
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - button "今日" [pressed] [ref=e270] [cursor=pointer]
+              - button "本周" [ref=e271] [cursor=pointer]
+              - button "本月" [ref=e272] [cursor=pointer]
+              - button "自定义" [disabled] [ref=e273]
+            - button "选择日期" [disabled]:
+              - img
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - generic [ref=e276]:
+              - generic [ref=e279]:
+                - paragraph [ref=e280]: 总专注时长
+                - strong [ref=e281]:
+                  - generic [ref=e282]:
+                    - generic "4h" [ref=e283]:
+                      - generic [ref=e285]:
+                        - generic [ref=e286]: "0"
+                        - generic [ref=e287]: "1"
+                        - generic [ref=e288]: "2"
+                        - generic [ref=e289]: "3"
+                        - generic [ref=e290]: "4"
+                        - generic [ref=e291]: "5"
+                        - generic [ref=e292]: "6"
+                        - generic [ref=e293]: "7"
+                        - generic [ref=e294]: "8"
+                        - generic [ref=e295]: "9"
+                        - generic [ref=e296]: "0"
+                        - generic [ref=e297]: "1"
+                        - generic [ref=e298]: "2"
+                        - generic [ref=e299]: "3"
+                        - generic [ref=e300]: "4"
+                        - generic [ref=e301]: "5"
+                        - generic [ref=e302]: "6"
+                        - generic [ref=e303]: "7"
+                        - generic [ref=e304]: "8"
+                        - generic [ref=e305]: "9"
+                      - generic [ref=e306]: .
+                      - generic [ref=e308]:
+                        - generic [ref=e309]: "0"
+                        - generic [ref=e310]: "1"
+                        - generic [ref=e311]: "2"
+                        - generic [ref=e312]: "3"
+                        - generic [ref=e313]: "4"
+                        - generic [ref=e314]: "5"
+                        - generic [ref=e315]: "6"
+                        - generic [ref=e316]: "7"
+                        - generic [ref=e317]: "8"
+                        - generic [ref=e318]: "9"
+                        - generic [ref=e319]: "0"
+                        - generic [ref=e320]: "1"
+                        - generic [ref=e321]: "2"
+                        - generic [ref=e322]: "3"
+                        - generic [ref=e323]: "4"
+                        - generic [ref=e324]: "5"
+                        - generic [ref=e325]: "6"
+                        - generic [ref=e326]: "7"
+                        - generic [ref=e327]: "8"
+                        - generic [ref=e328]: "9"
+                    - generic [ref=e329]: h
+                - text: 较昨天 +100% ↑
+              - generic [ref=e332]:
+                - paragraph [ref=e333]: 完成番茄数
+                - strong [ref=e334]:
+                  - generic [ref=e335]:
+                    - generic "7个" [ref=e336]:
+                      - generic [ref=e338]:
+                        - generic [ref=e339]: "0"
+                        - generic [ref=e340]: "1"
+                        - generic [ref=e341]: "2"
+                        - generic [ref=e342]: "3"
+                        - generic [ref=e343]: "4"
+                        - generic [ref=e344]: "5"
+                        - generic [ref=e345]: "6"
+                        - generic [ref=e346]: "7"
+                        - generic [ref=e347]: "8"
+                        - generic [ref=e348]: "9"
+                        - generic [ref=e349]: "0"
+                        - generic [ref=e350]: "1"
+                        - generic [ref=e351]: "2"
+                        - generic [ref=e352]: "3"
+                        - generic [ref=e353]: "4"
+                        - generic [ref=e354]: "5"
+                        - generic [ref=e355]: "6"
+                        - generic [ref=e356]: "7"
+                        - generic [ref=e357]: "8"
+                        - generic [ref=e358]: "9"
+                    - generic [ref=e359]: 个
+                - text: 较昨天 +40% ↑
+              - generic [ref=e362]:
+                - paragraph [ref=e363]: 完成任务数
+                - strong [ref=e364]:
+                  - generic [ref=e365]:
+                    - generic "2个" [ref=e366]:
+                      - generic [ref=e368]:
+                        - generic [ref=e369]: "0"
+                        - generic [ref=e370]: "1"
+                        - generic [ref=e371]: "2"
+                        - generic [ref=e372]: "3"
+                        - generic [ref=e373]: "4"
+                        - generic [ref=e374]: "5"
+                        - generic [ref=e375]: "6"
+                        - generic [ref=e376]: "7"
+                        - generic [ref=e377]: "8"
+                        - generic [ref=e378]: "9"
+                        - generic [ref=e379]: "0"
+                        - generic [ref=e380]: "1"
+                        - generic [ref=e381]: "2"
+                        - generic [ref=e382]: "3"
+                        - generic [ref=e383]: "4"
+                        - generic [ref=e384]: "5"
+                        - generic [ref=e385]: "6"
+                        - generic [ref=e386]: "7"
+                        - generic [ref=e387]: "8"
+                        - generic [ref=e388]: "9"
+                    - generic [ref=e389]: 个
+                - text: 较昨天新增 2 个
+              - generic [ref=e392]:
+                - paragraph [ref=e393]: 连续打卡天数
+                - strong [ref=e394]:
+                  - generic [ref=e395]:
+                    - generic "2天" [ref=e396]:
+                      - generic [ref=e398]:
+                        - generic [ref=e399]: "0"
+                        - generic [ref=e400]: "1"
+                        - generic [ref=e401]: "2"
+                        - generic [ref=e402]: "3"
+                        - generic [ref=e403]: "4"
+                        - generic [ref=e404]: "5"
+                        - generic [ref=e405]: "6"
+                        - generic [ref=e406]: "7"
+                        - generic [ref=e407]: "8"
+                        - generic [ref=e408]: "9"
+                        - generic [ref=e409]: "0"
+                        - generic [ref=e410]: "1"
+                        - generic [ref=e411]: "2"
+                        - generic [ref=e412]: "3"
+                        - generic [ref=e413]: "4"
+                        - generic [ref=e414]: "5"
+                        - generic [ref=e415]: "6"
+                        - generic [ref=e416]: "7"
+                        - generic [ref=e417]: "8"
+                        - generic [ref=e418]: "9"
+                    - generic [ref=e419]: 天
+                - text: 继续保持
+            - generic [ref=e420]:
+              - generic [ref=e421]:
+                - heading "今日专注趋势" [level=2] [ref=e423]
+                - application [ref=e427]:
+                  - generic [ref=e444]:
+                    - generic [ref=e445]:
+                      - generic [ref=e447]: 0时
+                      - generic [ref=e449]: 4时
+                      - generic [ref=e451]: 8时
+                      - generic [ref=e453]: 12时
+                      - generic [ref=e455]: 16时
+                      - generic [ref=e457]: 20时
+                    - generic [ref=e458]:
+                      - generic [ref=e460]: 0h
+                      - generic [ref=e462]: 2h
+                      - generic [ref=e464]: 4h
+                      - generic [ref=e466]: 6h
+              - generic [ref=e467]:
+                - heading "任务完成分析" [level=2] [ref=e468]
+                - generic [ref=e470]:
+                  - generic [ref=e471]:
+                    - application [ref=e474]
+                    - generic:
+                      - strong: 100%
+                      - generic: 任务完成率
+                  - generic [ref=e481]:
+                    - generic [ref=e482]:
+                      - generic [ref=e485]: 已完成任务数
+                      - strong [ref=e486]: 2 个
+                    - generic [ref=e487]:
+                      - generic [ref=e490]: 未完成任务数
+                      - strong [ref=e491]: 0 个
+                    - generic [ref=e492]:
+                      - generic [ref=e495]: 高优先级完成数
+                      - strong [ref=e496]: 1 个
+                    - generic [ref=e497]:
+                      - text: 较上周
+                      - generic [ref=e498]: +100%
+            - generic [ref=e499]:
+              - generic [ref=e500]:
+                - generic [ref=e501]:
+                  - heading "高效时段" [level=2] [ref=e502]
+                  - img [ref=e503]
+                  - generic [ref=e505]:
+                    - img [ref=e506]
+                    - text: 最佳时段
+                - generic [ref=e508]:
+                  - generic [ref=e509]:
+                    - generic [ref=e510]: 上午 09:00 - 11:00
+                    - generic [ref=e513]: 0.4h
+                  - generic [ref=e514]:
+                    - generic [ref=e515]: 下午 14:00 - 16:00
+                    - generic [ref=e517]: 0h
+                  - generic [ref=e518]:
+                    - generic [ref=e519]: 晚上 20:00 - 22:00
+                    - generic [ref=e522]: 0.7h
+                  - generic [ref=e523]:
+                    - generic [ref=e524]: 其他时段
+                    - generic [ref=e527]: 2.9h
+                    - img [ref=e528]
+              - generic [ref=e530]:
+                - heading "专注时长分布" [level=2] [ref=e531]
+                - generic [ref=e533]:
+                  - generic [ref=e534]:
+                    - application [ref=e537]
+                    - generic:
+                      - strong: 4.0h
+                      - generic: 总时长
+                  - generic [ref=e547]:
+                    - generic [ref=e548]:
+                      - generic [ref=e551]: 25 分钟专注
+                      - strong [ref=e552]: 1.7h
+                    - generic [ref=e553]:
+                      - generic [ref=e556]: 50 分钟专注
+                      - strong [ref=e557]: 2.3h
+                    - generic [ref=e558]:
+                      - generic [ref=e561]: 其他时长
+                      - strong [ref=e562]: 0h
+              - generic [ref=e563]:
+                - generic [ref=e564]:
+                  - heading "专注效率变化" [level=2] [ref=e565]
+                  - generic [ref=e566]:
+                    - generic [ref=e569]: 今天
+                    - generic [ref=e572]: 昨天
+                - application [ref=e576]:
+                  - generic [ref=e602]:
+                    - generic [ref=e603]:
+                      - generic [ref=e605]: 0时
+                      - generic [ref=e607]: 4时
+                      - generic [ref=e609]: 8时
+                      - generic [ref=e611]: 12时
+                      - generic [ref=e613]: 16时
+                      - generic [ref=e615]: 20时
+                    - generic [ref=e616]:
+                      - generic [ref=e618]: "0"
+                      - generic [ref=e620]: 30m
+                      - generic [ref=e622]: 1h
+                      - generic [ref=e624]: 1.5h
+                      - generic [ref=e626]: 2h
+          - complementary [ref=e627]:
+            - generic [ref=e628]:
+              - generic [ref=e629]:
+                - heading "我的成就" [level=2] [ref=e630]
+                - button "查看全部" [ref=e631] [cursor=pointer]
+              - generic [ref=e632]:
+                - generic [ref=e633]:
+                  - strong [ref=e635]: 连续专注 3 天
+                  - generic [ref=e636]: 未解锁
+                - generic [ref=e637]:
+                  - strong [ref=e639]: 连续专注 7 天
+                  - generic [ref=e640]: 未解锁
+                - generic [ref=e641]:
+                  - strong [ref=e643]: 连续专注 14 天
+                  - generic [ref=e644]: 未解锁
+                - generic [ref=e645]:
+                  - strong [ref=e647]: 连续专注 30 天
+                  - generic [ref=e648]: 未解锁
+                - generic [ref=e649]:
+                  - strong [ref=e651]: 累计 10 个番茄
+                  - generic [ref=e652]: 已解锁
+                - generic [ref=e653]:
+                  - strong [ref=e655]: 累计 50 个番茄
+                  - generic [ref=e656]: 未解锁
+            - generic [ref=e658]:
+              - heading "今天比昨天多专注了2.0 小时" [level=2] [ref=e659]
+              - paragraph [ref=e660]:
+                - text: 继续保持，你正在建立稳定
+                - text: 的专注习惯！
+    - region "Notifications alt+T"
+  - generic [ref=e661]: 3h

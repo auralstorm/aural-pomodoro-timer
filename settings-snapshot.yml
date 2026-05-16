@@ -1,0 +1,192 @@
+- generic [ref=e3]:
+  - banner:
+    - navigation "主导航" [ref=e4]:
+      - link "专注 专注" [ref=e6] [cursor=pointer]:
+        - /url: "#/focus"
+        - img "专注" [ref=e7]
+        - generic [ref=e8]: 专注
+      - link "任务 任务" [active] [ref=e9] [cursor=pointer]:
+        - /url: "#/tasks"
+        - img "任务" [ref=e10]
+        - generic [ref=e11]: 任务
+      - link "统计 统计" [ref=e12] [cursor=pointer]:
+        - /url: "#/statistics"
+        - img "统计" [ref=e13]
+        - generic [ref=e14]: 统计
+      - link "设置 设置" [ref=e15] [cursor=pointer]:
+        - /url: "#/settings"
+        - img "设置" [ref=e16]
+        - generic [ref=e17]: 设置
+  - main [ref=e261]:
+    - generic [ref=e262]:
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - heading "设置" [level=1] [ref=e265]
+          - paragraph [ref=e266]: 调整你的番茄节奏，让专注更适合自己
+        - generic [ref=e267]:
+          - button "恢复默认" [ref=e268] [cursor=pointer]:
+            - img [ref=e269]
+            - text: 恢复默认
+          - button "保存设置" [ref=e272] [cursor=pointer]:
+            - img [ref=e273]
+            - text: 保存设置
+      - generic [ref=e277]:
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - heading "番茄时间" [level=2] [ref=e281]
+            - generic [ref=e282]:
+              - generic [ref=e283]:
+                - group "专注时长设置" [ref=e284]:
+                  - generic [ref=e285]: 专注时长
+                  - generic [ref=e286]:
+                    - group [ref=e287]:
+                      - group [ref=e288]:
+                        - button "减少专注时长" [ref=e289] [cursor=pointer]:
+                          - img
+                      - spinbutton "专注时长" [ref=e290]: "25"
+                      - group [ref=e291]:
+                        - button "增加专注时长" [ref=e292] [cursor=pointer]:
+                          - img
+                    - generic [ref=e293]: 分钟
+                - group "短休息设置" [ref=e294]:
+                  - generic [ref=e295]: 短休息
+                  - generic [ref=e296]:
+                    - group [ref=e297]:
+                      - group [ref=e298]:
+                        - button "减少短休息" [ref=e299] [cursor=pointer]:
+                          - img
+                      - spinbutton "短休息" [ref=e300]: "5"
+                      - group [ref=e301]:
+                        - button "增加短休息" [ref=e302] [cursor=pointer]:
+                          - img
+                    - generic [ref=e303]: 分钟
+                - group "长休息设置" [ref=e304]:
+                  - generic [ref=e305]: 长休息
+                  - generic [ref=e306]:
+                    - group [ref=e307]:
+                      - group [ref=e308]:
+                        - button "减少长休息" [ref=e309] [cursor=pointer]:
+                          - img
+                      - spinbutton "长休息" [ref=e310]: "15"
+                      - group [ref=e311]:
+                        - button "增加长休息" [ref=e312] [cursor=pointer]:
+                          - img
+                    - generic [ref=e313]: 分钟
+                - group "长休息触发设置" [ref=e314]:
+                  - generic [ref=e315]: 长休息触发
+                  - generic [ref=e316]:
+                    - group [ref=e317]:
+                      - group [ref=e318]:
+                        - button "减少长休息触发" [ref=e319] [cursor=pointer]:
+                          - img
+                      - spinbutton "长休息触发" [ref=e320]: "4"
+                      - group [ref=e321]:
+                        - button "增加长休息触发" [ref=e322] [cursor=pointer]:
+                          - img
+                    - generic [ref=e323]: 个番茄后
+              - generic [ref=e324]:
+                - heading "预设方案" [level=3] [ref=e325]
+                - generic [ref=e326]:
+                  - button "经典 25 / 5" [pressed] [ref=e327] [cursor=pointer]:
+                    - img [ref=e329]
+                    - generic [ref=e331]: 经典
+                    - generic [ref=e332]: 25 / 5
+                  - button "深度专注 50 / 10" [ref=e333] [cursor=pointer]:
+                    - generic [ref=e334]: 深度专注
+                    - generic [ref=e335]: 50 / 10
+                  - button "轻量模式 15 / 3" [ref=e336] [cursor=pointer]:
+                    - generic [ref=e337]: 轻量模式
+                    - generic [ref=e338]: 15 / 3
+                  - button "自定义 25 / 5" [ref=e339] [cursor=pointer]:
+                    - generic [ref=e340]: 自定义
+                    - generic [ref=e341]: 25 / 5
+          - generic [ref=e342]:
+            - heading "声音与白噪音" [level=2] [ref=e344]
+            - generic [ref=e345]:
+              - generic [ref=e346]:
+                - generic [ref=e347]: 提醒音
+                - generic [ref=e348]:
+                  - button "轻柔" [pressed] [ref=e349] [cursor=pointer]:
+                    - img [ref=e351]
+                    - generic [ref=e353]: 轻柔
+                  - button "舒缓" [ref=e354] [cursor=pointer]:
+                    - generic [ref=e355]: 舒缓
+                  - button "皮卡丘" [ref=e356] [cursor=pointer]:
+                    - generic [ref=e357]: 皮卡丘
+                  - button "多啦A梦" [ref=e358] [cursor=pointer]:
+                    - generic [ref=e359]: 多啦A梦
+              - generic [ref=e360]:
+                - generic [ref=e361]: 白噪音
+                - generic [ref=e362]:
+                  - button "雷声" [pressed] [ref=e363] [cursor=pointer]:
+                    - img [ref=e365]
+                    - generic [ref=e367]: 雷声
+                  - button "森林" [ref=e368] [cursor=pointer]:
+                    - generic [ref=e369]: 森林
+                  - button "溪流" [ref=e370] [cursor=pointer]:
+                    - generic [ref=e371]: 溪流
+                  - button "火焰" [ref=e372] [cursor=pointer]:
+                    - generic [ref=e373]: 火焰
+              - generic [ref=e374]:
+                - generic [ref=e375]: 音量调节
+                - generic [ref=e376]:
+                  - img [ref=e377]
+                  - generic "音量调节" [ref=e381]:
+                    - slider [ref=e385]
+                - generic [ref=e386]: 50%
+                - button "播放预览" [ref=e387] [cursor=pointer]:
+                  - img [ref=e388]
+                  - text: 播放预览
+          - generic [ref=e392]:
+            - heading "主题外观" [level=2] [ref=e394]
+            - generic [ref=e395]:
+              - button "奶油白主题" [pressed] [ref=e396] [cursor=pointer]:
+                - img [ref=e398]
+                - generic [ref=e400]: 奶油白主题
+              - button "番茄红主题" [ref=e401] [cursor=pointer]:
+                - generic [ref=e402]: 番茄红主题
+              - button "薄荷绿主题" [ref=e403] [cursor=pointer]:
+                - generic [ref=e404]: 薄荷绿主题
+              - button "夜间专注主题" [ref=e405] [cursor=pointer]:
+                - generic [ref=e406]: 夜间专注主题
+        - generic [ref=e407]:
+          - generic [ref=e408]:
+            - heading "提醒设置" [level=2] [ref=e410]
+            - generic [ref=e411]:
+              - paragraph [ref=e413]: 专注结束提醒 专注结束时弹出提醒
+              - switch "专注结束提醒" [checked] [ref=e414] [cursor=pointer]
+            - generic [ref=e415]:
+              - paragraph [ref=e417]: 休息结束提醒 休息结束时弹出提醒
+              - switch "休息结束提醒" [checked] [ref=e418] [cursor=pointer]
+            - generic [ref=e419]:
+              - paragraph [ref=e421]: 桌面通知 通过桌面通知显示提醒
+              - switch "桌面通知" [checked] [ref=e422] [cursor=pointer]
+            - generic [ref=e423]:
+              - paragraph [ref=e425]: 应用内声音提醒 使用应用内声音播放提醒
+              - switch "应用内声音提醒" [checked] [ref=e426] [cursor=pointer]
+          - generic [ref=e427]:
+            - heading "自动化" [level=2] [ref=e429]
+            - generic [ref=e430]:
+              - paragraph [ref=e432]: 自动开始下一轮专注 休息结束后自动开始下一轮专注
+              - switch "自动开始下一轮专注" [ref=e433] [cursor=pointer]
+            - generic [ref=e434]:
+              - paragraph [ref=e436]: 自动开始休息 专注结束后自动进入休息
+              - switch "自动开始休息" [ref=e437] [cursor=pointer]
+            - generic [ref=e438]:
+              - paragraph [ref=e440]: 窗口置顶 保持番茄钟窗口在最前
+              - switch "窗口置顶" [ref=e441] [cursor=pointer]
+            - generic [ref=e442]:
+              - paragraph [ref=e444]: 最小化到托盘 点击关闭按钮时隐藏到系统托盘
+              - switch "最小化到托盘" [ref=e445] [cursor=pointer]
+            - generic [ref=e446]: 开启自动化后，番茄钟会帮你保持节奏。
+          - generic [ref=e447]:
+            - heading "本地数据" [level=2] [ref=e449]
+            - generic [ref=e450]: 专注记录，任务和设置会保存在当前设备中
+            - generic [ref=e452]:
+              - generic [ref=e454]:
+                - heading "清除本地数据" [level=3] [ref=e455]
+                - paragraph [ref=e456]: 删除本机保存的任务、专注记录和设置。
+              - button "清除数据" [ref=e457] [cursor=pointer]:
+                - img [ref=e458]
+                - text: 清除数据
+  - region "Notifications alt+T"

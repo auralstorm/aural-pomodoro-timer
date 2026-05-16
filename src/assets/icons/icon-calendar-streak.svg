@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(410)">
+      <stop stop-color="#F8EFE3"/>
+      <stop offset="1" stop-color="#F5EBDD"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="300" y1="280" x2="720" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC75B"/>
+      <stop offset="1" stop-color="#FFA31A"/>
+    </linearGradient>
+    <linearGradient id="star" x1="490" y1="470" x2="570" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD55C"/>
+      <stop offset="1" stop-color="#FFBE24"/>
+    </linearGradient>
+    <filter id="soft" x="180" y="180" width="664" height="664" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#E8D6B5" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <g filter="url(#soft)">
+    <rect x="312" y="314" width="400" height="384" rx="54" fill="#FFFDF9" stroke="url(#gold)" stroke-width="26"/>
+    <rect x="312" y="314" width="400" height="114" rx="54" fill="url(#gold)"/>
+    <rect x="394" y="264" width="42" height="108" rx="21" fill="#FFD07A" stroke="#F08B00" stroke-width="10"/>
+    <rect x="588" y="264" width="42" height="108" rx="21" fill="#FFD07A" stroke="#F08B00" stroke-width="10"/>
+    <path d="M512 474l26 54 60 9-43 42 10 59-53-28-53 28 10-59-43-42 60-9 26-54z" fill="url(#star)" stroke="#F2A216" stroke-width="10" stroke-linejoin="round"/>
+  </g>
+</svg>

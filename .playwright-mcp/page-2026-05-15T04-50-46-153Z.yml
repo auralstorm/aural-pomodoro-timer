@@ -1,0 +1,198 @@
+- generic:
+  - generic:
+    - generic:
+      - banner:
+        - navigation [ref=e213]:
+          - link [ref=e214] [cursor=pointer]:
+            - /url: "#/focus"
+            - img [ref=e215]
+            - generic [ref=e8]: 专注
+          - link [ref=e216] [cursor=pointer]:
+            - /url: "#/tasks"
+            - img [ref=e217]
+            - generic [ref=e11]: 任务
+          - link [ref=e218] [cursor=pointer]:
+            - /url: "#/statistics"
+            - img [ref=e219]
+            - generic [ref=e14]: 统计
+          - link [ref=e220] [cursor=pointer]:
+            - /url: "#/settings"
+            - img [ref=e221]
+            - generic [ref=e17]: 设置
+      - generic:
+        - generic:
+          - main:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading [level=2]: "1231"
+                    - generic:
+                      - img
+                      - generic:
+                        - generic:
+                          - generic: 专注中
+                          - generic:
+                            - generic:
+                              - generic: "0"
+                            - generic:
+                              - generic: "5"
+                            - generic: ":"
+                            - generic:
+                              - generic: "1"
+                            - generic:
+                              - generic: "6"
+                          - generic: 番茄时间更有价值
+                    - generic:
+                      - button [pressed]:
+                        - text: 专注
+                        - generic: 25min
+                      - button:
+                        - text: 短休息
+                        - generic: 5min
+                      - button:
+                        - text: 长休息
+                        - generic: 15min
+                    - generic:
+                      - button:
+                        - img
+                        - text: 暂停
+                      - button:
+                        - img
+                        - text: 重置
+                      - button:
+                        - img
+                        - text: 跳过本轮
+                - complementary:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading [level=2]:
+                          - img
+                          - text: 今日任务
+                        - paragraph: 已完成 2 / 8
+                      - button:
+                        - img
+                        - text: 添加任务
+                    - generic:
+                      - generic:
+                        - article:
+                          - button
+                          - generic:
+                            - heading [level=3]:
+                              - text: "1231"
+                              - generic:
+                                - generic:
+                                  - text: 0/2 个
+                                  - img
+                                - generic: ·
+                                - generic: 重要
+                          - generic:
+                            - generic: 专注中
+                            - button [disabled]:
+                              - img
+                            - button:
+                              - img
+                        - article:
+                          - button
+                          - generic:
+                            - heading [level=3]:
+                              - text: "666"
+                              - generic:
+                                - generic:
+                                  - text: 0/2 个
+                                  - img
+                          - generic:
+                            - button:
+                              - img
+                            - button [expanded]:
+                              - img
+                        - article:
+                          - button
+                          - generic:
+                            - heading [level=3]:
+                              - text: "55555"
+                              - generic:
+                                - generic:
+                                  - text: 0/2 个
+                                  - img
+                          - generic:
+                            - button:
+                              - img
+                            - button:
+                              - img
+                        - article:
+                          - button
+                          - generic:
+                            - heading [level=3]:
+                              - text: "444"
+                              - generic:
+                                - generic:
+                                  - text: 0/2 个
+                                  - img
+                          - generic:
+                            - button:
+                              - img
+                            - button:
+                              - img
+                    - generic:
+                      - generic:
+                        - link:
+                          - /url: "#/tasks"
+                          - text: 查看全部任务
+                          - img
+                  - generic:
+                    - generic:
+                      - heading [level=2]:
+                        - img
+                        - text: 专注工具
+                      - link:
+                        - /url: "#/settings"
+                        - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - generic: 白噪音
+                          - button:
+                            - generic: 雨声
+                            - img
+                        - button
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - generic: 提醒音
+                          - button:
+                            - generic: 轻柔提示音
+                            - img
+                        - button
+                      - button:
+                        - generic:
+                          - img
+                        - generic:
+                          - generic: 自动开始下一轮
+                          - generic: 休息结束自动开始
+                        - generic: 切换自动开始下一轮
+                      - button:
+                        - generic:
+                          - img
+                        - generic:
+                          - generic: 窗口置顶
+                          - generic: 保持在最前
+                        - generic: 切换窗口置顶
+      - region "Notifications alt+T"
+  - menu "更多操作" [active] [ref=e222]:
+    - menuitem "设为当前" [ref=e223]:
+      - img
+      - text: 设为当前
+    - separator [ref=e224]
+    - menuitem "编辑" [ref=e225]:
+      - img
+      - text: 编辑
+    - menuitem "删除" [ref=e226]:
+      - img
+      - text: 删除
