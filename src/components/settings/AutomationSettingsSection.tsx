@@ -6,14 +6,12 @@ type AutomationSettingsSectionProps = {
   autoStartNextRound: boolean;
   autoStartBreak: boolean;
   alwaysOnTop: boolean;
-  assistantEnabled: boolean;
   minimizeToTray: boolean;
   onChange: (
     key:
       | "autoStartNextRound"
       | "autoStartBreak"
       | "alwaysOnTop"
-      | "assistantEnabled"
       | "minimizeToTray",
     checked: boolean,
   ) => void;
@@ -23,7 +21,6 @@ export function AutomationSettingsSection({
   autoStartNextRound,
   autoStartBreak,
   alwaysOnTop,
-  assistantEnabled,
   minimizeToTray,
   onChange,
 }: AutomationSettingsSectionProps) {
@@ -46,12 +43,6 @@ export function AutomationSettingsSection({
         description="保持番茄钟窗口在最前"
         label="窗口置顶"
         onCheckedChange={(checked) => onChange("alwaysOnTop", checked)}
-      />
-      <SettingSwitchRow
-        checked={assistantEnabled}
-        description="开启后显示桌面番茄助手窗口"
-        label="桌面助手"
-        onCheckedChange={(checked) => onChange("assistantEnabled", checked)}
       />
       <SettingSwitchRow
         checked={minimizeToTray}

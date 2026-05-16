@@ -97,9 +97,13 @@ export function SettingsPage() {
             shortBreakMinutes={settings.shortBreakMinutes}
           />
           <ReminderSettingsSection
+            assistantEnabled={settings.assistantEnabled}
             breakCompleteReminderEnabled={settings.breakCompleteReminderEnabled}
             desktopNotificationEnabled={settings.desktopNotificationEnabled}
             focusCompleteReminderEnabled={settings.focusCompleteReminderEnabled}
+            onAssistantChange={(assistantEnabled) =>
+              settings.updateSettings({ assistantEnabled })
+            }
             onBreakCompleteReminderChange={(breakCompleteReminderEnabled) =>
               settings.updateSettings({ breakCompleteReminderEnabled })
             }
@@ -132,7 +136,6 @@ export function SettingsPage() {
           />
           <AutomationSettingsSection
             alwaysOnTop={settings.alwaysOnTop}
-            assistantEnabled={settings.assistantEnabled}
             autoStartBreak={settings.autoStartBreak}
             autoStartNextRound={settings.autoStartNextRound}
             minimizeToTray={settings.minimizeToTray}

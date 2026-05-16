@@ -76,9 +76,9 @@ export function TaskEditorForm({ values, onChange }: TaskEditorFormProps) {
                   aria-label={`预计 ${option} 个番茄`}
                   aria-pressed={isActive}
                   className={cn(
-                    "h-12 rounded-none border text-base font-semibold first:rounded-l-[var(--radius-md)] last:rounded-r-[var(--radius-md)]",
+                    "h-12 rounded-none border text-base font-semibold first:rounded-l-[var(--radius-md)] last:rounded-r-[var(--radius-md)] hover:bg-primary",
                     isActive
-                      ? "bg-[var(--color-tomato-soft)] text-primary"
+                      ? "bg-primary/50 text-foreground"
                       : "bg-background text-muted-foreground",
                   )}
                   key={option}
@@ -94,9 +94,9 @@ export function TaskEditorForm({ values, onChange }: TaskEditorFormProps) {
               aria-label="切换为自定义预计番茄数"
               aria-pressed={customExpanded}
               className={cn(
-                "h-12 rounded-none rounded-r-[var(--radius-md)] border text-sm font-semibold",
+                "h-12 rounded-none rounded-r-[var(--radius-md)] border text-sm font-semibold hover:bg-primary",
                 customExpanded
-                  ? "bg-[var(--color-tomato-soft)] text-primary"
+                  ? "bg-primary/50 text-foreground"
                   : "border-border bg-background text-muted-foreground",
               )}
               onClick={handleCustomEstimateExpand}

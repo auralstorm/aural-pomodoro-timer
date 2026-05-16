@@ -159,6 +159,30 @@ pnpm tauri:build:debug
 | `pnpm lint:fix` | ESLint 自动修复 |
 | `pnpm format` | Prettier 格式化 |
 | `pnpm format:check` | Prettier 格式检查 |
+| `pnpm release <version>` | 一键发版（见下方说明） |
+
+### 一键发版
+
+项目集成了 GitHub Actions 自动构建发版流程。运行一条命令即可完成版本号同步、打 tag、推送，并自动触发 CI 构建全平台安装包发布到 GitHub Releases：
+
+```bash
+pnpm release 0.2.0
+```
+
+该命令会依次执行：
+
+1. 同步更新 `package.json`、`src-tauri/tauri.conf.json`、`src-tauri/Cargo.toml` 中的版本号
+2. 创建 `release: v0.2.0` 提交
+3. 打 `v0.2.0` tag 并推送到远程仓库
+4. 自动触发 GitHub Actions，并行构建三个平台的安装包：
+
+| 平台 | 产物 |
+|------|------|
+| Windows x64 | `.exe`（NSIS）/ `.msi` |
+| macOS Universal | `.dmg` |
+| Linux x64 | `.deb` / `.AppImage` |
+
+构建完成后安装包会自动发布到 [GitHub Releases](../../releases) 页面。
 
 ## 技术栈
 

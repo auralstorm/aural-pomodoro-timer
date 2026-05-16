@@ -26,7 +26,7 @@ export function AppHeader() {
   } as CSSProperties & Record<`--${string}`, number>;
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-4 z-50 flex justify-center px-4">
+    <header className="pointer-events-none fixed inset-x-0 top-9 z-50 flex justify-center px-4">
       <nav
         aria-label="主导航"
         className="pointer-events-auto relative inline-grid rounded-[30px] bg-[rgba(255,252,249,0.58)] p-1.5 shadow-[0_18px_42px_rgba(58,46,42,0.09),inset_0_1px_0_rgba(255,255,255,0.82)] supports-[backdrop-filter]:bg-[rgba(255,252,249,0.42)] backdrop-blur-[22px] backdrop-saturate-[1.35]"

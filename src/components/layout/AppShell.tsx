@@ -13,6 +13,7 @@ import { useAssistantCommands } from "@/hooks/useAssistantCommands";
 import { useSettingsStore } from "@/stores/settingsStore";
 import { applyAppTheme } from "@/utils/theme";
 import { AppHeader } from "./AppHeader";
+import { WindowControls } from "./WindowControls";
 
 export function AppShell() {
   const theme = useSettingsStore((state) => state.theme);
@@ -42,6 +43,16 @@ export function AppShell() {
 
   return (
     <div className="relative min-h-dvh overflow-x-clip bg-background text-foreground">
+      <div
+        className="fixed inset-x-0 top-0 z-40 h-9 pr-[144px]"
+        data-tauri-drag-region
+        onDoubleClick={() => {
+          import("@tauri-apps/api/window").then(({ getCurrentWindow }) =>
+            getCurrentWindow().toggleMaximize(),
+          );
+        }}
+      />
+      <WindowControls />
       <div className="relative z-10">
         <AppHeader />
         <div className="pt-[calc(var(--header-height))]">
