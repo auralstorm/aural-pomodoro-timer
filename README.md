@@ -20,6 +20,7 @@
   <img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
   <img src="https://img.shields.io/badge/Rust-2021-DEA584?logo=rust&logoColor=white" alt="Rust" />
+  <img src="https://img.shields.io/badge/License-MIT-green?logo=opensourceinitiative&logoColor=white" alt="MIT License" />
 </p>
 
 ---
@@ -78,7 +79,19 @@
 
 ## 截图预览
 
-> 截图待补充。欢迎运行项目后截图并提交 PR！
+| 专注工作区 | 任务管理 |
+|:---:|:---:|
+| ![专注工作区](docs/screenshot/focus.png) | ![任务管理](docs/screenshot/task.png) |
+
+| 数据统计 | 应用设置 |
+|:---:|:---:|
+| ![数据统计](docs/screenshot/statis.png) | ![应用设置](docs/screenshot/setting.png) |
+
+<p align="center">
+  <img src="docs/screenshot/live2d.png" alt="Live2D 桌面助手" height="360" />
+  <br />
+  <em>Live2D 桌面助手</em>
+</p>
 
 ## 快速开始
 
@@ -111,12 +124,26 @@ pnpm tauri:dev
 ### 构建生产版本
 
 ```bash
-# 构建桌面安装包
+# 构建当前平台安装包
 pnpm tauri:build
 
 # 构建调试版本（含 DevTools）
 pnpm tauri:build:debug
 ```
+
+### 跨平台构建
+
+针对不同平台单独打包（跨平台编译需先安装对应 Rust target：`rustup target add <target-triple>`）：
+
+| 命令 | 目标平台 |
+|------|---------|
+| `pnpm tauri:build:win-x64` | Windows x86_64 |
+| `pnpm tauri:build:win-arm64` | Windows ARM64 |
+| `pnpm tauri:build:mac-x64` | macOS Intel |
+| `pnpm tauri:build:mac-arm64` | macOS Apple Silicon |
+| `pnpm tauri:build:mac-universal` | macOS 通用二进制（Universal） |
+| `pnpm tauri:build:linux-x64` | Linux x86_64 |
+| `pnpm tauri:build:linux-arm64` | Linux ARM64 |
 
 ### 可用脚本
 
@@ -126,7 +153,8 @@ pnpm tauri:build:debug
 | `pnpm build` | 类型检查 + 构建前端 |
 | `pnpm test` | 运行 Vitest 测试 |
 | `pnpm tauri:dev` | 启动 Tauri 开发模式 |
-| `pnpm tauri:build` | 构建桌面安装包 |
+| `pnpm tauri:build` | 构建当前平台安装包 |
+| `pnpm tauri:build:debug` | 构建调试版本 |
 | `pnpm lint` | ESLint 代码检查 |
 | `pnpm lint:fix` | ESLint 自动修复 |
 | `pnpm format` | Prettier 格式化 |
@@ -244,7 +272,7 @@ aural-pomodoro-timer/
 
 ## 许可证
 
-待定 — 尚未选择开源许可证。如需使用本项目代码，请先联系作者确认授权。
+本项目基于 [MIT License](LICENSE) 开源。
 
 ---
 

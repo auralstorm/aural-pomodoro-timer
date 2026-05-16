@@ -76,12 +76,12 @@ export function TimerPanelDecorLayer() {
       className="pointer-events-none absolute inset-0 overflow-hidden rounded-[inherit]"
       data-testid="timer-panel-decor"
     >
-      {sprites.map((sprite) => (
+      {sprites.map(({ id, className, ...rest }) => (
         <DecorSprite
-          key={sprite.id}
-          className={sprite.className}
-          testId={`timer-panel-sprite-${sprite.id}`}
-          {...sprite}
+          key={id}
+          className={className}
+          testId={`timer-panel-sprite-${id}`}
+          {...rest}
           reducedMotion={Boolean(reducedMotion)}
         />
       ))}

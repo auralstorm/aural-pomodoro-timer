@@ -21,7 +21,6 @@ export function FocusTaskList({
   currentTaskId,
   focusTaskId,
   focusStatus,
-  onCreateTask,
   onToggleComplete,
   onSetCurrent,
   onStart,

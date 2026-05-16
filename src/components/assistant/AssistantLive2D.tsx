@@ -11,7 +11,7 @@ export function Live2DCanvas() {
   const containerRef = useRef<HTMLDivElement>(null);
   const modelRef = useRef<Live2DModel | null>(null);
   const unlistenersRef = useRef<UnlistenFn[]>([]);
-  const bubbleTimerRef = useRef<ReturnType<typeof setTimeout>>();
+  const bubbleTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const [bubble, setBubble] = useState<string | null>(null);
   const [positionLocked, setPositionLocked] = useState(false);

@@ -10,7 +10,8 @@
       "Bash(pnpm lint *)",
       "Bash(grep -v \"^$\")",
       "Bash(grep -o '[a-z/-]*$')",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash(pnpm build *)"
     ]
   }
 }

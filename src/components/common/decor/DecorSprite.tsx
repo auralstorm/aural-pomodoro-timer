@@ -71,7 +71,7 @@ const animationVariants = {
     y: [0, -6, 0],
     x: [0, 2, 0],
   },
-} as const;
+};
 
 export function DecorSprite({
   kind,
