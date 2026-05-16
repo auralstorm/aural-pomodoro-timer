@@ -68,7 +68,7 @@ jobs:
             See the assets below to download the installer for your platform.
 
             ---
-            **Windows**: `.exe` (NSIS) / `.msi`
+            **Windows**: `.exe` (NSIS)
             **macOS**: `.dmg`
             **Linux**: `.deb` / `.AppImage`
           releaseDraft: false
