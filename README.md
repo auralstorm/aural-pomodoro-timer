@@ -8,6 +8,7 @@
 
 <p align="center">
   <a href="#功能特性">功能特性</a> ·
+  <a href="#系统架构">系统架构</a> ·
   <a href="#快速开始">快速开始</a> ·
   <a href="#技术栈">技术栈</a> ·
   <a href="#项目结构">项目结构</a> ·
@@ -178,7 +179,7 @@ pnpm release 0.2.0
 
 | 平台 | 产物 |
 |------|------|
-| Windows x64 | `.exe`（NSIS）/ `.msi` |
+| Windows x64 | `.exe`（NSIS） |
 | macOS Universal | `.dmg` |
 | Linux x64 | `.deb` / `.AppImage` |
 
@@ -212,6 +213,7 @@ pnpm release 0.2.0
 | **Rust** | 原生后端逻辑 |
 | **tauri-plugin-notification** | 系统通知 |
 | **tauri-plugin-opener** | 外部链接打开 |
+
 
 ## 项目结构
 
